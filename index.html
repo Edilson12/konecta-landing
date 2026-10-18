@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konecta.ch — Tu Puente entre Suiza y Latinoamérica</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #dc2626; /* Rojo suizo / identidad */
+            --primary-dark: #b91c1c;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --accent: #2563eb;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5r em;
+        }
+        .logo span {
+            color: var(--primary);
+        }
+        .hero {
+            padding: 9rem 2rem 5rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero h1 span {
+            color: #ef4444;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.3);
+        }
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .features {
+            max-width: 1200px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        footer {
+            background: var(--dark);
+            color: #94a3b8;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 5rem;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Konecta<span>.ch</span></a>
+            <a href="#contacto" class="btn" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Pronto en Ginebra</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Tu puente digital entre <span>Suiza y Latinoamérica</span></h1>
+        <p>Directorio de servicios latinos, clasificados sin comisiones y conexión directa con tu comunidad. Lanzamiento piloto en Ginebra.</p>
+        <a href="#features" class="btn">Conoce más del proyecto</a>
+    </section>
+
+    <section class="features" id="features">
+        <div class="card">
+            <i class="fa-solid fa-store"></i>
+            <h3>Directorio de Negocios</h3>
+            <p>Encuentra precios, horarios, contactos, redes sociales y perfiles destacados de profesionales y comercios latinos cerca de ti.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-tags"></i>
+            <h3>Clasificados Sin Comisiones</h3>
+            <p>Compra y vende artículos de forma directa publicando tus fotos de manera rápida, segura y transparente dentro de la comunidad.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-trophy"></i>
+            <h3>Winner Europa</h3>
+            <p>Acceso directo a nuestra plataforma de ofertas exclusivas, rifas y experiencias diseñadas para nuestra gente.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Konecta.ch (Piloto Ginebra). Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
