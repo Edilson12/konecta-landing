@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arepas Doña Luz · Ginebra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--tinta:#15233B;--acento:#F4B83A;--fondo:#F5F8FC;--texto:#1B2433;--suave:#5A6679;--linea:#C9D3E2;--ok:#1E7A46;--cerrado:#A83232}
+*{box-sizing:border-box;margin:0}
+body{font:400 1.0625rem/1.6 "Source Sans 3",system-ui,sans-serif;color:var(--texto);background:var(--fondo)}
+h1,h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.05}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+.hero{background:var(--tinta);color:#fff;padding:3.5rem 0 3rem;border-bottom:.5rem solid var(--acento)}
+.hero h1{font-size:clamp(2.6rem,9vw,5.5rem);font-weight:800;color:var(--acento);max-width:12ch;text-wrap:balance}
+.lema{font-size:1.25rem;max-width:34rem;margin:1rem 0 1.5rem;color:#E6ECF5}
+.estado{display:inline-block;padding:.3rem .8rem;border-radius:2rem;font-weight:600;font-size:.95rem;background:#fff;color:var(--ok)}
+.estado.cerrado{color:var(--cerrado)}
+.acciones{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:2px solid var(--acento);color:#fff}
+.btn.principal{background:var(--acento);color:var(--tinta)}
+a:focus-visible,.btn:focus-visible{outline:3px solid #2B6FE0;outline-offset:3px}
+main section{padding:3rem 0}
+main h2{font-size:clamp(1.8rem,5vw,2.5rem);margin-bottom:1.25rem;color:var(--tinta)}
+.carta{padding:0}
+.carta li{display:flex;gap:.75rem;align-items:baseline;list-style:none;padding:.55rem 0}
+.carta .punt{flex:1;border-bottom:2px dotted var(--linea)}
+.carta small{display:block;color:var(--suave)}
+.horas{border-collapse:collapse;width:100%;max-width:26rem}
+.horas td{padding:.45rem .5rem;border-bottom:1px solid var(--linea)}
+.horas tr.hoy{background:#FFF3D1;font-weight:600}
+.dos{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+.dos a{color:var(--tinta);font-weight:600}
+.flotante{position:fixed;right:1rem;bottom:1rem;z-index:5;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+@media (min-width:700px){.flotante{display:none}}
+footer{background:var(--tinta);color:#C9D3E2;padding:1.5rem 0 5rem;font-size:.95rem}
+footer a{color:#FF7A1A}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <h1 id="nombre"></h1>
+  <p class="lema" id="lema"></p>
+  <span class="estado" id="estado"></span>
+  <div class="acciones" id="acciones"></div>
+</div></header>
+
+<main class="wrap">
+  <section><h2>Carta</h2><ul class="carta" id="carta"></ul></section>
+  <section class="dos">
+    <div><h2>Horario</h2><table class="horas" id="horas"></table></div>
+    <div><h2>Dónde estamos</h2><p id="direccion"></p><p style="margin-top:1rem"><a id="mapa" href="#">Cómo llegar</a></p></div>
+  </section>
+</main>
+
+<footer><div class="wrap">Página creada por <a href="https://konecta.ch">Konecta</a>, el directorio latino de Ginebra.</div></footer>
+<a class="btn principal flotante" id="flotante" href="#">Escribir por WhatsApp</a>
+
+<script>
+// ===== EDITAR SOLO ESTE BLOQUE PARA CADA CLIENTE =====
+const NEGOCIO = {
+  nombre: "Arepas Doña Luz",
+  lema: "Arepas, empanadas y bandeja paisa hechas cada día en Ginebra.",
+  color: "#F4B83A",
+  telefono: "+41 22 000 00 00",
+  whatsapp: "41220000000",
+  mensajeWhatsapp: "Hola, vi su página y quisiera hacer un pedido.",
+  direccion: "Rue de l’Exemple 12, 1201 Genève",
+  mapa: "https://www.google.com/maps/search/?api=1&query=Rue+de+l%27Exemple+12+1201+Gen%C3%A8ve",
+  instagram: "https://instagram.com/tu_negocio",
+  horario: { lun: null, mar: ["09:00","18:00"], mie: ["09:00","18:00"], jue: ["09:00","18:00"], vie: ["09:00","20:00"], sab: ["10:00","20:00"], dom: ["10:00","15:00"] },
+  carta: [
+    ["Arepa de queso", "Con mantequilla y queso fresco", 9.5],
+    ["Arepa rellena de pollo", "Pollo desmechado y aguacate", 13],
+    ["Empanadas (3 unidades)", "Carne o pollo, con ají casero", 9],
+    ["Bandeja paisa", "Plato completo del día", 24],
+    ["Jugo natural", "Maracuyá, mora o lulo", 5]
+  ]
+};
+// ===== FIN DEL BLOQUE =====
+
+const D = ["dom","lun","mar","mie","jue","vie","sab"];
+const ES = {lun:"Lunes",mar:"Martes",mie:"Miércoles",jue:"Jueves",vie:"Viernes",sab:"Sábado",dom:"Domingo"};
+const $ = id => document.getElementById(id);
+const n = NEGOCIO;
+document.documentElement.style.setProperty("--acento", n.color);
+document.title = n.nombre + " · Ginebra";
+$("nombre").textContent = n.nombre;
+$("lema").textContent = n.lema;
+$("direccion").textContent = n.direccion;
+$("mapa").href = n.mapa;
+
+const wa = "https://wa.me/" + n.whatsapp + "?text=" + encodeURIComponent(n.mensajeWhatsapp);
+$("flotante").href = wa;
+$("acciones").innerHTML =
+  '<a class="btn principal" href="' + wa + '">Escribir por WhatsApp</a>' +
+  '<a class="btn" href="tel:' + n.telefono.replace(/\s/g,"") + '">Llamar</a>' +
+  (n.instagram ? '<a class="btn" href="' + n.instagram + '">Instagram</a>' : "");
+
+$("carta").innerHTML = n.carta.map(i =>
+  "<li><span><b>" + i[0] + "</b><small>" + i[1] + "</small></span><i class='punt'></i><span>" + Number(i[2]).toFixed(2) + " CHF</span></li>").join("");
+
+const p = new Intl.DateTimeFormat("en-US",{timeZone:"Europe/Zurich",weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+const g = t => p.find(x => x.type === t).value;
+const hoy = D[["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"))];
+const m = s => { const a = s.split(":"); return +a[0]*60 + +a[1]; };
+const ahora = +g("hour")*60 + +g("minute");
+const h = n.horario[hoy];
+const abierto = h && ahora >= m(h[0]) && ahora < m(h[1]);
+$("estado").textContent = abierto ? "Abierto ahora · cierra a las " + h[1] : "Cerrado ahora";
+$("estado").classList.toggle("cerrado", !abierto);
+
+$("horas").innerHTML = ["lun","mar","mie","jue","vie","sab","dom"].map(k =>
+  "<tr" + (k === hoy ? " class='hoy'" : "") + "><td>" + ES[k] + "</td><td>" + (n.horario[k] ? n.horario[k][0] + " – " + n.horario[k][1] : "Cerrado") + "</td></tr>").join("");
+
+const ld = document.createElement("script");
+ld.type = "application/ld+json";
+ld.textContent = JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness",name:n.nombre,telephone:n.telefono,address:n.direccion});
+document.head.appendChild(ld);
+</script>
+</body>
+</html>
