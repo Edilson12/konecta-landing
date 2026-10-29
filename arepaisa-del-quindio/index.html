@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arepaisa del Quindío – Arepas colombianas en Meyrin | Konecta.ch</title>
+<meta name="description" content="Arepas colombianas 100% de maíz, hechas por encargo en Meyrin (Ginebra). Pide por WhatsApp.">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f172a; --muted:#475569; --brand:#F25C05; --brand-dark:#c94a00;
+  --red:#dc2626; --bg:#fffdfa; --line:#e7e2d8; --soft:#fbf4e6;
+  --wa:#1faa59; --wa-dark:#17894a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header{padding:18px 0;border-bottom:1px solid var(--line)}
+.brand{font-weight:800;font-size:1.35rem;text-decoration:none;letter-spacing:-.01em}
+.brand span{color:var(--red)}
+.hero{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:48px;align-items:center;padding:44px 0 40px}
+.hero img{width:100%;height:auto;border-radius:50%;display:block;box-shadow:0 18px 40px -18px rgba(15,23,42,.45)}
+.badge{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.85rem;font-weight:700;color:var(--brand-dark);margin-bottom:14px}
+h1{font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.05;margin:0 0 12px;letter-spacing:-.02em;font-weight:800}
+.lead{font-size:1.1rem;color:var(--muted);margin:0 0 24px;max-width:46ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;min-height:48px}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-dark)}
+.btn-call{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-call:hover{background:var(--ink);color:#fff}
+section{padding:34px 0;border-top:1px solid var(--line)}
+h2{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 20px}
+.menu{list-style:none;margin:0;padding:0}
+.menu li{display:flex;align-items:baseline;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.menu li:last-child{border-bottom:0}
+.menu .name{font-weight:800;font-size:1.15rem}
+.menu .pack{color:var(--muted);font-size:.95rem}
+.menu .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.menu .price{font-weight:800;font-size:1.4rem;color:var(--brand-dark);white-space:nowrap}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.info h3{margin:0 0 4px;font-size:1rem}
+.info p{margin:0;color:var(--muted)}
+.info a{color:var(--brand-dark);font-weight:700}
+.founder{background:var(--soft);border-radius:14px;padding:18px 20px;color:var(--muted);font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:26px 0 90px;color:var(--muted);font-size:.9rem}
+footer a{color:var(--brand-dark)}
+.float{position:fixed;right:16px;bottom:16px;z-index:10;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);border-radius:999px}
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;gap:26px;padding-top:28px;text-align:left}
+  .hero img{max-width:260px}
+  .menu li{flex-wrap:wrap}
+  .menu .dots{display:none}
+  .menu .price{margin-left:auto}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap"><a class="brand" href="/">Konecta<span>.ch</span></a></div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <img src="logo.jpg" alt="Logo de Arepaisa del Quindío: arepa, mazorca de maíz y jeep colombiano sobre los colores de la bandera" width="340" height="340">
+    <div>
+      <span class="badge">Negocio del fundador de Konecta</span>
+      <h1>Arepaisa del Quindío</h1>
+      <p class="lead">Arepas colombianas tradicionales, hechas 100% de maíz. Las preparamos por encargo en Meyrin.</p>
+      <div class="actions">
+        <a class="btn btn-wa" id="wa" href="https://wa.me/41783286271?text=Hola%2C%20vi%20Arepaisa%20del%20Quind%C3%ADo%20en%20Konecta.ch%20y%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener">Pedir por WhatsApp</a>
+        <a class="btn btn-call" href="tel:+41783286271">Llamar al +41 78 328 62 71</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="productos">
+    <h2>Lo que preparamos</h2>
+    <p class="sub">Precios en francos suizos. Se piden por adelantado.</p>
+    <ul class="menu">
+      <li>
+        <div>
+          <div class="name">Arepas tradicionales</div>
+          <div class="pack">Paquete de 7 arepas</div>
+        </div>
+        <span class="dots"></span>
+        <span class="price">10 CHF</span>
+      </li>
+      <li>
+        <div>
+          <div class="name">Arepas de queso</div>
+          <div class="pack">Paquete de 4 arepas</div>
+        </div>
+        <span class="dots"></span>
+        <span class="price">10 CHF</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="info">
+    <div class="info">
+      <div>
+        <h3>Dónde estamos</h3>
+        <p>Meyrin, Ginebra. Se entrega o se recoge según lo que acordemos al hacer el pedido.</p>
+      </div>
+      <div>
+        <h3>Cómo pedir</h3>
+        <p>Escríbenos por WhatsApp con lo que quieres y para qué día. Te confirmamos enseguida.</p>
+      </div>
+      <div>
+        <h3>También en España</h3>
+        <p>Arepaisa del Quindío tiene su propia tienda en línea: <a href="https://www.arepaisadelquindio.com" target="_blank" rel="noopener">arepaisadelquindio.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="founder">
+      Esta ficha pertenece al fundador de Konecta y sirve de ejemplo de cómo se ve un negocio en el directorio. ¿Tienes un negocio latino en Ginebra? <a href="/negocios.html">Mira cómo estar en Konecta</a>.
+    </div>
+  </section>
+
+</main>
+
+<a class="btn btn-wa float" href="https://wa.me/41783286271?text=Hola%2C%20vi%20Arepaisa%20del%20Quind%C3%ADo%20en%20Konecta.ch%20y%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">WhatsApp</a>
+
+<footer>
+  <div class="wrap">
+    <a href="/">Konecta.ch</a> · Directorio de negocios latinos en Ginebra · <a href="/privacidad.html">Privacidad</a>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FoodEstablishment",
+  "name":"Arepaisa del Quindío",
+  "description":"Arepas colombianas 100% de maíz, por encargo en Meyrin (Ginebra).",
+  "servesCuisine":"Colombiana",
+  "telephone":"+41783286271",
+  "areaServed":"Meyrin, Ginebra",
+  "url":"https://konecta.ch/directorio/arepaisa-del-quindio/",
+  "sameAs":["https://www.arepaisadelquindio.com"]
+}
+</script>
+</body>
+</html>
