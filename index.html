@@ -3,11 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Directorio · Negocios latinos en Ginebra | Konecta</title>
-<meta name="description" content="Directorio de negocios latinos en Ginebra, con WhatsApp directo, zona y precios.">
-<link rel="canonical" href="https://konecta.ch/directorio/">
+<title>Konecta · El directorio de negocios latinos en Ginebra</title>
+<meta name="description" content="Encuentra restaurantes, belleza, oficios, trámites y más negocios latinos en Ginebra, con WhatsApp directo, horario y cómo llegar.">
+<link rel="canonical" href="https://konecta.ch/">
+<meta property="og:title" content="Konecta · Negocios latinos en Ginebra">
+<meta property="og:description" content="El directorio de la comunidad latina de Ginebra: WhatsApp directo, horario y cómo llegar.">
+<meta property="og:url" content="https://konecta.ch/">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Konecta","url":"https://konecta.ch/","inLanguage":"es"}</script>
 <style>
 :root{--dark:#0f172a;--rojo:#dc2626;--naranja:#F25C05;--naranja-txt:#B83E00;--tinta:#14213D;--fondo:#F4F8FC;--texto:#1B2433;--suave:#55627A;--linea:#C9D3E2}
 *{box-sizing:border-box;margin:0}
@@ -50,16 +55,6 @@ section h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:.6rem}
 footer{border-top:1px solid var(--linea);padding:1.5rem 0;color:var(--suave);font-size:.95rem}
 .ficha img{display:block;width:5.5rem;height:5.5rem;border-radius:50%;margin-bottom:.8rem}
 a.chip{color:var(--tinta);text-decoration:none}
-
-.cab{padding:1.5rem 0 .5rem}
-.cab h1{font-size:clamp(2rem,6vw,3rem);margin-bottom:.6rem}
-.lista{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));align-items:stretch}
-.lista .ficha{max-width:none;height:100%}
-.lista a.tarj{text-decoration:none;color:inherit;display:block}
-.ficha img{display:block;width:5.5rem;height:5.5rem;border-radius:50%;margin-bottom:.8rem}
-a.chip{color:var(--tinta);text-decoration:none}
-.vacia{border:2px dashed var(--linea);border-top:.5rem dashed var(--linea);box-shadow:none;background:transparent}
-.menu a.actual{border-bottom:3px solid var(--naranja)}
 </style>
 </head>
 <body>
@@ -67,44 +62,78 @@ a.chip{color:var(--tinta);text-decoration:none}
   <nav class="top" aria-label="Principal">
     <a class="marca" href="/">Konecta<span>.ch</span></a>
     <div class="menu">
-      <a class="actual" href="/directorio/" aria-current="page">Directorio</a>
-      <a href="/negocios.html">Para negocios</a>
+      <a href="directorio/">Directorio</a>
+      <a href="negocios.html">Para negocios</a>
       <a class="btn sec" data-wa href="mailto:hola@konecta.ch">Escríbenos</a>
     </div>
   </nav>
 
-  <header class="cab">
-    <h1>Directorio de negocios latinos en Ginebra</h1>
-    <p class="sub">Estamos sumando los primeros negocios. Toca una ficha para ver los detalles y escribirles por WhatsApp.</p>
+  <header class="hero">
+    <div>
+      <span class="etiqueta">Abriendo en Ginebra</span>
+      <h1>Los negocios latinos de Ginebra, <mark>en un solo lugar</mark></h1>
+      <p>Restaurantes, belleza, oficios, trámites y más. Con WhatsApp directo, horario y cómo llegar.</p>
+      <div class="acciones">
+        <a class="btn" data-wa data-msg="Hola, quiero que me avisen cuando abra el directorio de Konecta." href="mailto:hola@konecta.ch">Avísame cuando abra</a>
+        <a class="btn sec" href="negocios.html">Tengo un negocio</a>
+      </div>
+    </div>
+    <div class="ficha" aria-label="Primer negocio en Konecta">
+      <img src="directorio/arepaisa-del-quindio/logo.jpg" alt="Logo de Arepaisa del Quindío" width="88" height="88">
+      <h3>Arepaisa del Quindío</h3>
+      <span class="ok">Arepas colombianas por encargo en Meyrin</span>
+      <div class="fila">
+        <a class="chip" href="https://wa.me/41783286271?text=Hola%2C%20vi%20Arepaisa%20del%20Quind%C3%ADo%20en%20Konecta.ch%20y%20quiero%20hacer%20un%20pedido.">WhatsApp</a>
+        <a class="chip" href="tel:+41783286271">Llamar</a>
+        <a class="chip" href="directorio/arepaisa-del-quindio/">Ver ficha</a>
+      </div>
+      <small>Uno de los primeros negocios de Konecta</small>
+    </div>
   </header>
 
   <main>
-    <section>
-      <div class="lista">
-        <a class="tarj" href="/directorio/arepaisa-del-quindio/">
-          <div class="ficha">
-            <img src="/directorio/arepaisa-del-quindio/logo.jpg" alt="Logo de Arepaisa del Quindío" width="88" height="88">
-            <h3>Arepaisa del Quindío</h3>
-            <span class="ok">Arepas colombianas por encargo en Meyrin</span>
-            <div class="fila"><span class="chip">Comida</span><span class="chip">100% maíz</span></div>
-            <small>Ver ficha y pedir por WhatsApp</small>
-          </div>
-        </a>
-        <a class="tarj" href="/negocios.html">
-          <div class="ficha vacia">
-            <h3>Tu negocio aquí</h3>
-            <span class="ok">Los primeros 15 entran como socios fundadores</span>
-            <small>Mira cómo estar en Konecta</small>
-          </div>
-        </a>
+    <section id="categorias">
+      <h2>Lo que irás encontrando</h2>
+      <p class="sub">Estamos sumando los primeros negocios. Estas son las categorías con las que empezamos.</p>
+      <div class="rejilla">
+        <div><h3>Comida y tiendas</h3><p>Restaurantes, panaderías y tiendas de productos latinos.</p></div>
+        <div><h3>Belleza y bienestar</h3><p>Peluquerías, barberías, uñas y masajes.</p></div>
+        <div><h3>Oficios y reparaciones</h3><p>Electricistas, plomeros, mudanzas y limpieza.</p></div>
+        <div><h3>Trámites y asesoría</h3><p>Ayuda con papeles, seguros, impuestos y traducciones.</p></div>
+        <div><h3>Envíos y viajes</h3><p>Envíos a Latinoamérica, agencias de viaje y transporte.</p></div>
+        <div><h3>Eventos y comunidad</h3><p>Música, fiestas, asociaciones y encuentros.</p></div>
       </div>
+    </section>
+
+    <section>
+      <h2>Por qué Konecta</h2>
+      <div class="rejilla" style="margin-top:1.5rem">
+        <div><span class="n">1</span><h3>Contacto directo</h3><p>Un toque y hablas con el negocio por WhatsApp, sin intermediarios.</p></div>
+        <div><span class="n">2</span><h3>Todo en español</h3><p>Información clara y hecha por y para la comunidad latina.</p></div>
+        <div><span class="n">3</span><h3>Pensado para Ginebra</h3><p>Horario, ubicación y cómo llegar, para que encuentres lo que buscas cerca.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="bloque">
+        <h2>¿Tienes un negocio latino en Ginebra?</h2>
+        <p>Te creamos tu página web y te incluimos en el directorio. Los primeros 15 negocios entran como socios fundadores, con ventajas especiales.</p>
+        <a class="btn" href="negocios.html">Ver cómo funciona</a>
+      </div>
+    </section>
+
+    <section class="recomienda">
+      <h2>¿Conoces un buen negocio latino?</h2>
+      <p>Cuéntanoslo y lo invitamos a formar parte de Konecta.</p>
+      <a class="btn sec" data-wa data-msg="Hola, quiero recomendar un negocio para Konecta. Se llama:" href="mailto:hola@konecta.ch">Recomendar un negocio</a>
     </section>
   </main>
 
-  <footer>© 2026 Konecta · Ginebra · <a href="/negocios.html">Para negocios</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="mailto:hola@konecta.ch">hola@konecta.ch</a></footer>
+  <footer>© 2026 Konecta · Ginebra · <a href="negocios.html">Para negocios</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="mailto:hola@konecta.ch">hola@konecta.ch</a></footer>
 </div>
 
 <script>
+// EDITAR: tu número de WhatsApp, con prefijo de país, sin + ni espacios (ejemplo: 41791234567)
 const WHATSAPP = "41783286271";
 const MENSAJE = "Hola, quiero información sobre Konecta.";
 if (/^\d{8,15}$/.test(WHATSAPP)) {
