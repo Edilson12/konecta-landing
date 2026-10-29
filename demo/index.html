@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arepas Doña Luz · Ginebra</title>
+<title>Peluquería Ejemplo · Ginebra</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -47,7 +47,7 @@ footer a{color:#FF7A1A}
 </div></header>
 
 <main class="wrap">
-  <section><h2>Carta</h2><ul class="carta" id="carta"></ul></section>
+  <section><h2>Servicios y precios</h2><ul class="carta" id="carta"></ul></section>
   <section class="dos">
     <div><h2>Horario</h2><table class="horas" id="horas"></table></div>
     <div><h2>Dónde estamos</h2><p id="direccion"></p><p style="margin-top:1rem"><a id="mapa" href="#">Cómo llegar</a></p></div>
@@ -60,22 +60,22 @@ footer a{color:#FF7A1A}
 <script>
 // ===== EDITAR SOLO ESTE BLOQUE PARA CADA CLIENTE =====
 const NEGOCIO = {
-  nombre: "Arepas Doña Luz",
-  lema: "Arepas, empanadas y bandeja paisa hechas cada día en Ginebra.",
-  color: "#F4B83A",
+  nombre: "Peluquería Ejemplo",
+  lema: "Cortes, color y peinados para toda la familia. Página de ejemplo con datos inventados.",
+  color: "#F25C05",
   telefono: "+41 22 000 00 00",
   whatsapp: "41220000000",
-  mensajeWhatsapp: "Hola, vi su página y quisiera hacer un pedido.",
+  mensajeWhatsapp: "Hola, vi su página y quisiera reservar una cita.",
   direccion: "Rue de l’Exemple 12, 1201 Genève",
   mapa: "https://www.google.com/maps/search/?api=1&query=Rue+de+l%27Exemple+12+1201+Gen%C3%A8ve",
-  instagram: "https://instagram.com/tu_negocio",
-  horario: { lun: null, mar: ["09:00","18:00"], mie: ["09:00","18:00"], jue: ["09:00","18:00"], vie: ["09:00","20:00"], sab: ["10:00","20:00"], dom: ["10:00","15:00"] },
+  instagram: "",
+  horario: { lun: null, mar: ["09:00","18:30"], mie: ["09:00","18:30"], jue: ["09:00","18:30"], vie: ["09:00","18:30"], sab: ["09:00","17:00"], dom: null },
   carta: [
-    ["Arepa de queso", "Con mantequilla y queso fresco", 9.5],
-    ["Arepa rellena de pollo", "Pollo desmechado y aguacate", 13],
-    ["Empanadas (3 unidades)", "Carne o pollo, con ají casero", 9],
-    ["Bandeja paisa", "Plato completo del día", 24],
-    ["Jugo natural", "Maracuyá, mora o lulo", 5]
+    ["Corte de mujer", "Lavado, corte y secado", 55],
+    ["Corte de hombre", "Corte con máquina o tijera", 30],
+    ["Tinte completo", "Color y secado, según largo", 85],
+    ["Peinado para evento", "Con cita previa", 60],
+    ["Tratamiento hidratante", "Para cabello seco o dañado", 35]
   ]
 };
 // ===== FIN DEL BLOQUE =====
