@@ -53,6 +53,8 @@ section h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:.6rem}
 .recomienda{text-align:center}
 .recomienda p{max-width:32rem;margin:0 auto 1.25rem}
 footer{border-top:1px solid var(--linea);padding:1.5rem 0;color:var(--suave);font-size:.95rem}
+.ficha img{display:block;width:5.5rem;height:5.5rem;border-radius:50%;margin-bottom:.8rem}
+a.chip{color:var(--tinta);text-decoration:none}
 </style>
 </head>
 <body>
@@ -76,11 +78,16 @@ footer{border-top:1px solid var(--linea);padding:1.5rem 0;color:var(--suave);fon
         <a class="btn sec" href="negocios.html">Tengo un negocio</a>
       </div>
     </div>
-    <div class="ficha" aria-label="Ejemplo de ficha en Konecta">
-      <h3>Arepas Doña Luz</h3>
-      <span class="ok">Abierto ahora · cierra a las 18:00</span>
-      <div class="fila"><span class="chip">WhatsApp</span><span class="chip">Llamar</span><span class="chip">Cómo llegar</span></div>
-      <small>Ejemplo de cómo se verá cada negocio</small>
+    <div class="ficha" aria-label="Primer negocio en Konecta">
+      <img src="directorio/arepaisa-del-quindio/logo.jpg" alt="Logo de Arepaisa del Quindío" width="88" height="88">
+      <h3>Arepaisa del Quindío</h3>
+      <span class="ok">Arepas colombianas por encargo en Meyrin</span>
+      <div class="fila">
+        <a class="chip" href="https://wa.me/41783286271?text=Hola%2C%20vi%20Arepaisa%20del%20Quind%C3%ADo%20en%20Konecta.ch%20y%20quiero%20hacer%20un%20pedido.">WhatsApp</a>
+        <a class="chip" href="tel:+41783286271">Llamar</a>
+        <a class="chip" href="directorio/arepaisa-del-quindio/">Ver ficha</a>
+      </div>
+      <small>Uno de los primeros negocios de Konecta</small>
     </div>
   </header>
 
@@ -127,7 +134,7 @@ footer{border-top:1px solid var(--linea);padding:1.5rem 0;color:var(--suave);fon
 
 <script>
 // EDITAR: tu número de WhatsApp, con prefijo de país, sin + ni espacios (ejemplo: 41791234567)
-const WHATSAPP = "41782515441";
+const WHATSAPP = "41783286271";
 const MENSAJE = "Hola, quiero información sobre Konecta.";
 if (/^\d{8,15}$/.test(WHATSAPP)) {
   document.querySelectorAll("[data-wa]").forEach(a => {
@@ -137,4 +144,3 @@ if (/^\d{8,15}$/.test(WHATSAPP)) {
 </script>
 </body>
 </html>
-
