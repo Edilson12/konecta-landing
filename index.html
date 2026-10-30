@@ -60,6 +60,8 @@ a.chip{color:var(--tinta);text-decoration:none}
 .cat:hover{transform:translateY(-3px)}
 .cat .ico{width:3.3rem;height:3.3rem;border-radius:50%;background:#fff;color:var(--c);display:grid;place-items:center;margin-bottom:1rem}
 .cat svg{width:1.65rem;height:1.65rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+a.cat{display:block;color:var(--texto);text-decoration:none}
+a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
 .cat h3{margin:0 0 .35rem;font-size:1.15rem}
 .cat p{margin:0}
 @media (prefers-reduced-motion:reduce){.cat{transition:none}.cat:hover{transform:none}}
@@ -102,32 +104,32 @@ a.chip{color:var(--tinta);text-decoration:none}
   <main>
     <section id="categorias">
       <h2>Lo que irás encontrando</h2>
-      <p class="sub">Estamos sumando los primeros negocios. Estas son las categorías con las que empezamos.</p>
+      <p class="sub">Estamos sumando los primeros negocios. Estas son las categorías con las que empezamos. Toca una para ver sus negocios.</p>
       <div class="cats">
-        <div class="cat" style="--t:#FFE6D2;--c:#B83E00">
+        <a class="cat" href="directorio/#comida" style="--t:#FFE6D2;--c:#B83E00">
           <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3v6a3 3 0 0 0 6 0V3M9 3v18M17 3c-2 2-3 4.5-3 7.5V13h3v8"/></svg></span>
           <h3>Comida y tiendas</h3><p>Restaurantes, panaderías y tiendas de productos latinos.</p>
-        </div>
-        <div class="cat" style="--t:#FBE1EC;--c:#B0245A">
+        </a>
+        <a class="cat" href="directorio/#belleza" style="--t:#FBE1EC;--c:#B0245A">
           <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></span>
           <h3>Belleza y bienestar</h3><p>Peluquerías, barberías, uñas y masajes.</p>
-        </div>
-        <div class="cat" style="--t:#FFF0BF;--c:#8A5A00">
+        </a>
+        <a class="cat" href="directorio/#oficios" style="--t:#FFF0BF;--c:#8A5A00">
           <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <h3>Oficios y reparaciones</h3><p>Electricistas, plomeros, mudanzas y limpieza.</p>
-        </div>
-        <div class="cat" style="--t:#DCE8FA;--c:#1E4FA3">
+        </a>
+        <a class="cat" href="directorio/#tramites" style="--t:#DCE8FA;--c:#1E4FA3">
           <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8M8 9h2"/></svg></span>
           <h3>Trámites y asesoría</h3><p>Ayuda con papeles, seguros, impuestos y traducciones.</p>
-        </div>
-        <div class="cat" style="--t:#D6F0E6;--c:#0F6B52">
+        </a>
+        <a class="cat" href="directorio/#envios" style="--t:#D6F0E6;--c:#0F6B52">
           <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></span>
           <h3>Envíos y viajes</h3><p>Envíos a Latinoamérica, agencias de viaje y transporte.</p>
-        </div>
-        <div class="cat" style="--t:#E8E0FA;--c:#5B33B0">
+        </a>
+        <a class="cat" href="directorio/#eventos" style="--t:#E8E0FA;--c:#5B33B0">
           <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
           <h3>Eventos y comunidad</h3><p>Música, fiestas, asociaciones y encuentros.</p>
-        </div>
+        </a>
       </div>
     </section>
 
