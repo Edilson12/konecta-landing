@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#F25C05">
+<meta name="apple-mobile-web-app-title" content="Konecta">
 <title>Arepaisa del Quindío – Arepas colombianas en Meyrin | Konecta.ch</title>
 <meta name="description" content="Arepas colombianas 100% de maíz, hechas por encargo en Meyrin (Ginebra). Pide por WhatsApp.">
-<link rel="icon" href="logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -22,7 +28,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
 .wrap{max-width:980px;margin:0 auto;padding:0 20px}
 header{padding:18px 0;border-bottom:1px solid var(--line)}
-.brand{font-weight:800;font-size:1.35rem;text-decoration:none;letter-spacing:-.01em}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.35rem;text-decoration:none;letter-spacing:-.01em}
 .brand span{color:var(--red)}
 .hero{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:48px;align-items:center;padding:44px 0 40px}
 .hero img{width:100%;height:auto;border-radius:50%;display:block;box-shadow:0 18px 40px -18px rgba(15,23,42,.45)}
@@ -61,12 +67,13 @@ footer a{color:var(--brand-dark)}
   .menu .price{margin-left:auto}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.brand img{width:2.25rem;height:2.25rem;border-radius:.5rem;display:block}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap"><a class="brand" href="/">Konecta<span>.ch</span></a></div>
+  <div class="wrap"><a class="brand" href="/"><img src="/logo-konecta.png" width="36" height="36" alt="">Konecta<span>.ch</span></a></div>
 </header>
 
 <main class="wrap">
