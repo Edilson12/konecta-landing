@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Directorio · Negocios latinos en Ginebra | Konecta</title>
-<meta name="description" content="Directorio de negocios latinos en Ginebra, con WhatsApp directo, zona y precios.">
+<meta name="description" content="Directorio de negocios latinos en Ginebra. Busca por rubro, nombre o zona y escribe por WhatsApp.">
 <link rel="canonical" href="https://konecta.ch/directorio/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -50,16 +50,39 @@ section h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:.6rem}
 footer{border-top:1px solid var(--linea);padding:1.5rem 0;color:var(--suave);font-size:.95rem}
 .ficha img{display:block;width:5.5rem;height:5.5rem;border-radius:50%;margin-bottom:.8rem}
 a.chip{color:var(--tinta);text-decoration:none}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.1rem}
+.cat{background:var(--t);border:1px solid rgba(20,33,61,.08);border-radius:1rem;padding:1.4rem;transition:transform .2s}
+.cat:hover{transform:translateY(-3px)}
+.cat .ico{width:3.3rem;height:3.3rem;border-radius:50%;background:#fff;color:var(--c);display:grid;place-items:center;margin-bottom:1rem}
+.cat svg{width:1.65rem;height:1.65rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cat h3{margin:0 0 .35rem;font-size:1.15rem}
+.cat p{margin:0}
+@media (prefers-reduced-motion:reduce){.cat{transition:none}.cat:hover{transform:none}}
 
 .cab{padding:1.5rem 0 .5rem}
 .cab h1{font-size:clamp(2rem,6vw,3rem);margin-bottom:.6rem}
-.lista{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));align-items:stretch}
-.lista .ficha{max-width:none;height:100%}
-.lista a.tarj{text-decoration:none;color:inherit;display:block}
-.ficha img{display:block;width:5.5rem;height:5.5rem;border-radius:50%;margin-bottom:.8rem}
-a.chip{color:var(--tinta);text-decoration:none}
-.vacia{border:2px dashed var(--linea);border-top:.5rem dashed var(--linea);box-shadow:none;background:transparent}
 .menu a.actual{border-bottom:3px solid var(--naranja)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.buscar{width:100%;max-width:34rem;font:inherit;font-size:1.05rem;padding:.9rem 1.1rem;border:2px solid var(--linea);border-radius:.6rem;background:#fff;color:var(--texto)}
+.buscar:focus{outline:3px solid var(--naranja);outline-offset:2px;border-color:var(--tinta)}
+.filtros{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.1rem 0 .4rem}
+.filtros button{font:600 .98rem "Plus Jakarta Sans",system-ui,sans-serif;min-height:2.75rem;padding:.5rem 1rem;border-radius:2rem;border:2px solid var(--linea);background:#fff;color:var(--tinta);cursor:pointer}
+.filtros button:hover{border-color:var(--tinta)}
+.filtros button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.filtros button:focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+#cuenta{color:var(--suave);margin:.8rem 0 1.2rem;font-weight:600}
+.lista{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));align-items:stretch}
+.lista .ficha{max-width:none;height:100%;display:flex;flex-direction:column}
+.lista .ficha h3 a{color:var(--tinta);text-decoration:none}
+.lista .ficha h3 a:hover{text-decoration:underline}
+.lista .ficha img{display:block;width:5rem;height:5rem;border-radius:50%;margin-bottom:.8rem;object-fit:cover}
+.lista .ficha .fila{margin-top:.8rem}
+.lista .ficha .acc{margin-top:auto;padding-top:1rem}
+a.chip{color:var(--tinta);text-decoration:none}
+a.chip:hover{border-color:var(--tinta)}
+.vacio{background:#fff;border:2px dashed var(--linea);border-radius:.9rem;padding:1.6rem;max-width:36rem}
+.vacio p{margin:.2rem 0 .8rem}
+.mas{margin-top:2.5rem}
 </style>
 </head>
 <body>
@@ -75,30 +98,21 @@ a.chip{color:var(--tinta);text-decoration:none}
 
   <header class="cab">
     <h1>Directorio de negocios latinos en Ginebra</h1>
-    <p class="sub">Estamos sumando los primeros negocios. Toca una ficha para ver los detalles y escribirles por WhatsApp.</p>
+    <p class="sub">Busca por nombre, rubro o zona, o elige una categoría. Escríbeles directo por WhatsApp.</p>
+    <label class="sr" for="q">Buscar negocios</label>
+    <input class="buscar" id="q" type="search" placeholder="Ej.: peluquería, Meyrin, arepas" autocomplete="off">
+    <div class="filtros" id="filtros" role="group" aria-label="Categorías"></div>
   </header>
 
   <main>
-    <section>
-      <div class="lista">
-        <a class="tarj" href="/directorio/arepaisa-del-quindio/">
-          <div class="ficha">
-            <img src="/directorio/arepaisa-del-quindio/logo.jpg" alt="Logo de Arepaisa del Quindío" width="88" height="88">
-            <h3>Arepaisa del Quindío</h3>
-            <span class="ok">Arepas colombianas por encargo en Meyrin</span>
-            <div class="fila"><span class="chip">Comida</span><span class="chip">100% maíz</span></div>
-            <small>Ver ficha y pedir por WhatsApp</small>
-          </div>
-        </a>
-        <a class="tarj" href="/negocios.html">
-          <div class="ficha vacia">
-            <h3>Tu negocio aquí</h3>
-            <span class="ok">Los primeros 15 entran como socios fundadores</span>
-            <small>Mira cómo estar en Konecta</small>
-          </div>
-        </a>
-      </div>
-    </section>
+    <p id="cuenta" aria-live="polite"></p>
+    <div class="lista" id="lista"></div>
+    <div class="vacio" id="vacio" hidden>
+      <h3 id="vacio-titulo">Sin resultados</h3>
+      <p id="vacio-texto"></p>
+      <a class="btn" href="/negocios.html">Súmate como socio fundador</a>
+    </div>
+    <p class="mas sub">¿Tienes un negocio latino en Ginebra? Los primeros 15 entran como socios fundadores. <a href="/negocios.html">Mira cómo estar en Konecta</a>.</p>
   </main>
 
   <footer>© 2026 Konecta · Ginebra · <a href="/negocios.html">Para negocios</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="mailto:hola@konecta.ch">hola@konecta.ch</a></footer>
@@ -106,12 +120,113 @@ a.chip{color:var(--tinta);text-decoration:none}
 
 <script>
 const WHATSAPP = "41783286271";
-const MENSAJE = "Hola, quiero información sobre Konecta.";
-if (/^\d{8,15}$/.test(WHATSAPP)) {
-  document.querySelectorAll("[data-wa]").forEach(a => {
-    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg || MENSAJE);
+
+/* Categorías: la clave va en el enlace (directorio/#belleza) */
+const CATS = {
+  comida: "Comida y tiendas",
+  belleza: "Belleza y bienestar",
+  oficios: "Oficios y reparaciones",
+  tramites: "Trámites y asesoría",
+  envios: "Envíos y viajes",
+  eventos: "Eventos y comunidad"
+};
+
+/* Para sumar un negocio: copia un bloque { ... }, cámbiale los datos y sepáralo con coma. */
+const NEGOCIOS = [
+  {
+    nombre: "Arepaisa del Quindío",
+    cat: "comida",
+    zona: "Meyrin",
+    desc: "Arepas colombianas por encargo en Meyrin.",
+    etiquetas: ["Arepas", "100% maíz", "Colombiana"],
+    url: "/directorio/arepaisa-del-quindio/",
+    logo: "/directorio/arepaisa-del-quindio/logo.jpg",
+    whatsapp: "41783286271"
+  }
+];
+
+const $ = id => document.getElementById(id);
+const limpiar = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+let cat = "";
+
+function el(tag, props, texto) {
+  const e = document.createElement(tag);
+  if (props) Object.assign(e, props);
+  if (texto) e.textContent = texto;
+  return e;
+}
+
+function crearFiltros() {
+  const caja = $("filtros");
+  const lista = [["", "Todos"], ...Object.entries(CATS)];
+  lista.forEach(([clave, nombre]) => {
+    const b = el("button", { type: "button" }, nombre);
+    b.dataset.cat = clave;
+    b.addEventListener("click", () => elegir(clave, true));
+    caja.appendChild(b);
   });
 }
+
+function elegir(clave, actualizarUrl) {
+  cat = CATS[clave] ? clave : "";
+  if (actualizarUrl) history.replaceState(null, "", cat ? "#" + cat : location.pathname + location.search);
+  mostrar();
+}
+
+function tarjeta(n) {
+  const f = el("article", { className: "ficha" });
+  if (n.logo) f.appendChild(el("img", { src: n.logo, alt: "Logo de " + n.nombre, width: 80, height: 80, loading: "lazy" }));
+  const h = el("h3");
+  h.appendChild(el("a", { href: n.url }, n.nombre));
+  f.appendChild(h);
+  f.appendChild(el("span", { className: "ok" }, n.desc));
+  const fila = el("div", { className: "fila" });
+  fila.appendChild(el("span", { className: "chip" }, CATS[n.cat]));
+  fila.appendChild(el("span", { className: "chip" }, n.zona));
+  f.appendChild(fila);
+  const acc = el("div", { className: "fila acc" });
+  acc.appendChild(el("a", { className: "chip", href: n.url }, "Ver ficha"));
+  if (n.whatsapp) {
+    const msg = "Hola, vi " + n.nombre + " en Konecta.ch y quiero hacer una consulta.";
+    acc.appendChild(el("a", { className: "chip", href: "https://wa.me/" + n.whatsapp + "?text=" + encodeURIComponent(msg), target: "_blank", rel: "noopener" }, "WhatsApp"));
+  }
+  f.appendChild(acc);
+  return f;
+}
+
+function mostrar() {
+  const q = limpiar($("q").value);
+  document.querySelectorAll("#filtros button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.cat === cat)));
+  const res = NEGOCIOS.filter(n => {
+    if (cat && n.cat !== cat) return false;
+    if (!q) return true;
+    const pajar = limpiar([n.nombre, CATS[n.cat], n.zona, n.desc, (n.etiquetas || []).join(" ")].join(" "));
+    return q.split(/\s+/).every(p => pajar.includes(p));
+  });
+  const lista = $("lista");
+  lista.replaceChildren(...res.map(tarjeta));
+  const nombreCat = cat ? " en " + CATS[cat] : "";
+  $("cuenta").textContent = res.length === 1 ? "1 negocio" + nombreCat : res.length + " negocios" + nombreCat;
+  const vacio = $("vacio");
+  vacio.hidden = res.length > 0;
+  if (!res.length) {
+    $("vacio-titulo").textContent = q ? "No encontramos resultados" : "Todavía no hay negocios aquí";
+    $("vacio-texto").textContent = q
+      ? "Prueba con otra palabra o elige otra categoría."
+      : "Estamos sumando los primeros negocios de esta categoría. ¿Tienes uno? Puedes ser de los primeros.";
+  }
+}
+
+if (/^\d{8,15}$/.test(WHATSAPP)) {
+  document.querySelectorAll("[data-wa]").forEach(a => {
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola, quiero información sobre Konecta.");
+  });
+}
+
+crearFiltros();
+$("q").addEventListener("input", mostrar);
+window.addEventListener("hashchange", () => elegir(location.hash.slice(1), false));
+elegir(location.hash.slice(1), false);
 </script>
 </body>
 </html>
