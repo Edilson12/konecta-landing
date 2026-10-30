@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anuncios · Compra y venta de la comunidad latina en Ginebra | Konecta</title>
+<meta name="description" content="Anuncios de la comunidad latina en Ginebra: compra y venta entre vecinos, revisados antes de publicarse.">
+<link rel="canonical" href="https://konecta.ch/anuncios/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#0f172a;--rojo:#dc2626;--naranja:#F25C05;--naranja-txt:#B83E00;--tinta:#14213D;--fondo:#F4F8FC;--texto:#1B2433;--suave:#55627A;--linea:#C9D3E2}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 1.0625rem/1.6 "Plus Jakarta Sans",system-ui,sans-serif;color:var(--texto);background:var(--fondo)}
+h1,h2,h3{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--tinta);line-height:1.08}
+.wrap{max-width:64rem;margin:0 auto;padding:0 1.25rem}
+a{color:var(--naranja-txt)}
+a:focus-visible{outline:3px solid #2B6FE0;outline-offset:3px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0}
+.marca{font:800 1.75rem "Plus Jakarta Sans",system-ui,sans-serif;color:var(--dark);text-decoration:none;letter-spacing:-.02em}.marca span{color:var(--rojo)}
+.menu{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+.menu a:not(.btn){color:var(--tinta);font-weight:600;text-decoration:none}
+.btn{display:inline-block;padding:.8rem 1.35rem;border-radius:.5rem;font-weight:600;text-decoration:none;background:var(--naranja);color:var(--tinta);border:2px solid var(--naranja)}
+.btn.sec{background:transparent;border-color:var(--tinta)}
+.hero{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));align-items:center;padding:2.5rem 0 3.5rem}
+.hero h1{font-size:clamp(2.2rem,6.5vw,3.6rem);font-weight:800;letter-spacing:-.02em;text-wrap:balance}
+.hero mark{background:linear-gradient(transparent 62%,var(--naranja) 62%);color:inherit}
+.hero p{font-size:1.2rem;margin:1.1rem 0 1.5rem;max-width:32rem}
+.etiqueta{display:inline-block;background:var(--tinta);color:#fff;font-size:.9rem;font-weight:600;padding:.3rem .8rem;border-radius:2rem;margin-bottom:1rem}
+.acciones{display:flex;flex-wrap:wrap;gap:.75rem}
+.ficha{background:#fff;border:1px solid var(--linea);border-top:.5rem solid var(--naranja);border-radius:.75rem;padding:1.5rem;box-shadow:0 8px 30px rgba(20,33,61,.1);max-width:22rem;justify-self:center}
+.ficha h3{font-size:1.5rem}
+.ficha .ok{display:inline-block;color:#1E7A46;font-weight:600;font-size:.95rem;margin:.4rem 0 1rem}
+.fila{display:flex;gap:.5rem;flex-wrap:wrap}
+.chip{padding:.45rem .9rem;border-radius:.4rem;background:var(--fondo);font-weight:600;font-size:.95rem;border:1px solid var(--linea)}
+.ficha small{display:block;color:var(--suave);margin-top:1rem}
+section{padding:2.5rem 0}
+section h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:.6rem}
+.sub{color:var(--suave);max-width:36rem;margin-bottom:1.5rem}
+.rejilla{display:grid;gap:1.5rem 2rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.rejilla>*{border-top:3px solid var(--tinta);padding-top:.8rem}
+.rejilla h3{font-size:1.25rem;margin-bottom:.3rem}
+.n{font:800 2.2rem "Plus Jakarta Sans",system-ui,sans-serif;color:var(--naranja-txt);display:block;line-height:1;margin-bottom:.3rem}
+.bloque{background:var(--tinta);color:#fff;border-radius:.9rem;padding:2rem}
+.bloque h2{color:#fff}
+.bloque p{max-width:40rem;color:#E6ECF5;margin-bottom:1.25rem}
+.recomienda{text-align:center}
+.recomienda p{max-width:32rem;margin:0 auto 1.25rem}
+footer{border-top:1px solid var(--linea);padding:1.5rem 0;color:var(--suave);font-size:.95rem}
+.ficha img{display:block;width:5.5rem;height:5.5rem;border-radius:50%;margin-bottom:.8rem}
+a.chip{color:var(--tinta);text-decoration:none}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.1rem}
+.cat{background:var(--t);border:1px solid rgba(20,33,61,.08);border-radius:1rem;padding:1.4rem;transition:transform .2s}
+.cat:hover{transform:translateY(-3px)}
+.cat .ico{width:3.3rem;height:3.3rem;border-radius:50%;background:#fff;color:var(--c);display:grid;place-items:center;margin-bottom:1rem}
+.cat svg{width:1.65rem;height:1.65rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+a.cat{display:block;color:var(--texto);text-decoration:none}
+a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
+.cat h3{margin:0 0 .35rem;font-size:1.15rem}
+.cat p{margin:0}
+@media (prefers-reduced-motion:reduce){.cat{transition:none}.cat:hover{transform:none}}
+
+.cab{padding:1.5rem 0 .5rem}
+.cab h1{font-size:clamp(2rem,6vw,3rem);margin-bottom:.6rem}
+.menu a.actual{border-bottom:3px solid var(--naranja)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.barra{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.1rem 0 .4rem;align-items:center}
+.buscar,.sel{font:inherit;font-size:1.02rem;padding:.85rem 1rem;border:2px solid var(--linea);border-radius:.6rem;background:#fff;color:var(--texto)}
+.buscar{flex:1 1 15rem;max-width:30rem}
+.buscar:focus,.sel:focus{outline:3px solid var(--naranja);outline-offset:2px;border-color:var(--tinta)}
+.filtros{display:flex;flex-wrap:wrap;gap:.6rem;margin:.8rem 0 .4rem}
+.filtros button{font:600 .98rem "Plus Jakarta Sans",system-ui,sans-serif;min-height:2.75rem;padding:.5rem 1rem;border-radius:2rem;border:2px solid var(--linea);background:#fff;color:var(--tinta);cursor:pointer}
+.filtros button:hover{border-color:var(--tinta)}
+.filtros button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.filtros button:focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+#cuenta{color:var(--suave);margin:.8rem 0 1.2rem;font-weight:600}
+.lista{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr))}
+.anun{background:#fff;border:1px solid var(--linea);border-radius:1rem;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .2s}
+.anun:hover{transform:translateY(-3px)}
+.foto{aspect-ratio:4/3;width:100%;object-fit:cover;display:block;background:#EEF1F6}
+.sinfoto{aspect-ratio:4/3;display:grid;place-items:center;background:#EEF1F6;color:var(--suave);font-weight:600}
+.anun .cuerpo{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.anun h3{margin:0;font-size:1.1rem}
+.anun h3 button{all:unset;cursor:pointer;color:var(--tinta);font-weight:800}
+.anun h3 button:focus-visible{outline:3px solid var(--naranja);outline-offset:3px;border-radius:.3rem}
+.precio{font-weight:800;font-size:1.25rem;color:var(--naranja-txt)}
+.meta{color:var(--suave);font-size:.92rem}
+.etq{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.2rem}
+.t-vendo{background:#D6F0E6;border-color:transparent}
+.t-compro{background:#DCE8FA;border-color:transparent}
+.t-ejemplo{background:#FFF0BF;border-color:transparent}
+.vacio{background:#fff;border:2px dashed var(--linea);border-radius:.9rem;padding:1.6rem;max-width:36rem}
+.vacio p{margin:.2rem 0 .8rem}
+.como{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));margin:2.5rem 0 1rem}
+.como div{background:#fff;border:1px solid var(--linea);border-radius:.9rem;padding:1.1rem 1.2rem}
+.como b{display:block;margin-bottom:.2rem}
+.aviso{color:var(--suave);font-size:.95rem;max-width:52rem}
+dialog{border:0;border-radius:1rem;padding:0;width:min(94vw,34rem);max-height:92vh;color:var(--texto)}
+dialog::backdrop{background:rgba(20,33,61,.55)}
+.dcont{padding:1.3rem 1.4rem 1.5rem;display:flex;flex-direction:column;gap:.6rem}
+.galeria{display:flex;gap:.5rem;overflow-x:auto;scroll-snap-type:x mandatory}
+.galeria img,.galeria .sinfoto{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:4/3;object-fit:cover;width:100%}
+.cerrar{align-self:flex-end;font:700 1rem "Plus Jakarta Sans",system-ui,sans-serif;min-height:2.75rem;padding:.4rem 1rem;border:2px solid var(--linea);background:#fff;border-radius:2rem;cursor:pointer;color:var(--tinta)}
+.cerrar:focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+.btn[aria-disabled="true"]{opacity:.5;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.anun{transition:none}.anun:hover{transform:none}.galeria{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top" aria-label="Principal">
+    <a class="marca" href="/">Konecta<span>.ch</span></a>
+    <div class="menu">
+      <a href="/directorio/">Directorio</a>
+      <a class="actual" href="/anuncios/" aria-current="page">Anuncios</a>
+      <a href="/negocios.html">Para negocios</a>
+      <a class="btn sec" data-wa href="mailto:hola@konecta.ch">Escríbenos</a>
+    </div>
+  </nav>
+
+  <header class="cab">
+    <h1>Anuncios de la comunidad</h1>
+    <p class="sub">Compra y venta entre vecinos latinos de Ginebra. Revisamos cada anuncio antes de publicarlo y cada uno dura 30 días.</p>
+    <p><a class="btn" id="publicar" href="mailto:hola@konecta.ch">Publicar un anuncio</a></p>
+    <div class="barra">
+      <label class="sr" for="q">Buscar anuncios</label>
+      <input class="buscar" id="q" type="search" placeholder="Ej.: cochecito, bicicleta, sofá" autocomplete="off">
+      <label class="sr" for="cat">Categoría</label>
+      <select class="sel" id="cat"></select>
+    </div>
+    <div class="filtros" id="filtros" role="group" aria-label="Tipo de anuncio"></div>
+  </header>
+
+  <main>
+    <p id="cuenta" aria-live="polite"></p>
+    <div class="lista" id="lista"></div>
+    <div class="vacio" id="vacio" hidden>
+      <h3 id="vacio-titulo">Sin anuncios</h3>
+      <p id="vacio-texto"></p>
+      <a class="btn" id="publicar2" href="mailto:hola@konecta.ch">Publicar un anuncio</a>
+    </div>
+
+    <div class="como">
+      <div><b>1. Nos escribes</b>Envíanos por WhatsApp lo que vendes o buscas, el precio, tu zona y hasta 4 fotos.</div>
+      <div><b>2. Lo revisamos</b>Comprobamos que sea correcto y que tengas permiso para publicar las fotos y tu contacto.</div>
+      <div><b>3. Se publica 30 días</b>Los interesados te escriben directo por WhatsApp. Pasados 30 días, el anuncio se retira.</div>
+    </div>
+    <p class="aviso">Konecta solo publica los anuncios y no participa en la compra ni en el pago. Queda en un lugar público, revisa el artículo antes de pagar y desconfía de quien te pida dinero por adelantado. No publicamos armas, medicamentos, animales, alcohol, ofertas de empleo ni de vivienda.</p>
+  </main>
+
+  <footer>© 2026 Konecta · Ginebra · <a href="/directorio/">Directorio</a> · <a href="/negocios.html">Para negocios</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="mailto:hola@konecta.ch">hola@konecta.ch</a></footer>
+</div>
+
+<dialog id="det" aria-labelledby="det-titulo">
+  <div class="dcont">
+    <button class="cerrar" id="cerrar" type="button">Cerrar</button>
+    <div class="galeria" id="det-fotos"></div>
+    <div class="etq" id="det-etq"></div>
+    <h2 id="det-titulo" style="margin:0"></h2>
+    <p class="precio" id="det-precio" style="margin:0"></p>
+    <p class="meta" id="det-meta" style="margin:0"></p>
+    <p id="det-desc" style="margin:.3rem 0"></p>
+    <a class="btn" id="det-wa" target="_blank" rel="noopener" href="#">Escribir por WhatsApp</a>
+    <p class="aviso" style="margin:.4rem 0 0">Queda en un lugar público y no pagues por adelantado a desconocidos.</p>
+  </div>
+</dialog>
+
+<script>
+const WHATSAPP = "41783286271";
+const VIGENCIA_DIAS = 30;
+
+const CATS = {
+  hogar: "Hogar y muebles",
+  ninos: "Bebés y niños",
+  ropa: "Ropa y accesorios",
+  tecno: "Tecnología",
+  vehiculos: "Vehículos y bicicletas",
+  otros: "Otros"
+};
+const TIPOS = { vendo: "Vendo", compro: "Compro" };
+
+/* Para publicar un anuncio: copia un bloque { ... }, cambia los datos y sepáralo con coma.
+   fecha = día de publicación (AAAA-MM-DD). A los 30 días el anuncio deja de mostrarse solo.
+   fotos = rutas de las imágenes dentro de /anuncios/fotos/ (máximo 4). whatsapp = número con 41 delante, sin + ni espacios. */
+const ANUNCIOS = [
+  {
+    id: "ejemplo-cochecito",
+    tipo: "vendo",
+    cat: "ninos",
+    titulo: "Cochecito de bebé, casi nuevo",
+    precio: "120 CHF",
+    zona: "Vernier",
+    desc: "Anuncio de ejemplo para mostrar cómo se ve. Usado pocos meses, incluye capota y protector de lluvia. Se entrega en mano.",
+    fotos: [],
+    whatsapp: "",
+    fecha: "2026-10-30",
+    ejemplo: true
+  }
+];
+
+const $ = id => document.getElementById(id);
+const limpiar = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+let tipo = "";
+
+function el(tag, props, texto) {
+  const e = document.createElement(tag);
+  if (props) Object.assign(e, props);
+  if (texto) e.textContent = texto;
+  return e;
+}
+
+function diasRestantes(a) {
+  const [y, m, d] = a.fecha.split("-").map(Number);
+  const hoy = new Date();
+  const hoy0 = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
+  const pasados = Math.round((hoy0 - new Date(y, m - 1, d)) / 86400000);
+  return VIGENCIA_DIAS - pasados;
+}
+
+const vigentes = () => ANUNCIOS.filter(a => diasRestantes(a) > 0);
+
+function textoDias(a) {
+  const n = diasRestantes(a);
+  return n === 1 ? "queda 1 día" : "quedan " + n + " días";
+}
+
+function etiquetas(a) {
+  const f = el("div", { className: "etq" });
+  f.appendChild(el("span", { className: "chip t-" + a.tipo }, TIPOS[a.tipo]));
+  f.appendChild(el("span", { className: "chip" }, CATS[a.cat]));
+  if (a.ejemplo) f.appendChild(el("span", { className: "chip t-ejemplo" }, "Ejemplo"));
+  return f;
+}
+
+function foto(a, cls) {
+  if (a.fotos && a.fotos.length) return el("img", { className: cls, src: a.fotos[0], alt: a.titulo, loading: "lazy" });
+  return el("div", { className: "sinfoto" }, "Sin foto");
+}
+
+function tarjeta(a) {
+  const c = el("article", { className: "anun" });
+  const f = foto(a, "foto");
+  c.appendChild(f);
+  const cu = el("div", { className: "cuerpo" });
+  cu.appendChild(etiquetas(a));
+  const h = el("h3");
+  const b = el("button", { type: "button" }, a.titulo);
+  h.appendChild(b);
+  cu.appendChild(h);
+  cu.appendChild(el("span", { className: "precio" }, a.precio));
+  cu.appendChild(el("span", { className: "meta" }, a.zona + " · " + textoDias(a)));
+  c.appendChild(cu);
+  c.addEventListener("click", () => abrir(a.id));
+  return c;
+}
+
+function abrir(id) {
+  const a = ANUNCIOS.find(x => x.id === id);
+  if (!a || diasRestantes(a) <= 0) return;
+  const g = $("det-fotos");
+  g.replaceChildren();
+  if (a.fotos && a.fotos.length) a.fotos.forEach((src, i) => g.appendChild(el("img", { src, alt: a.titulo + " (foto " + (i + 1) + ")" })));
+  else g.appendChild(el("div", { className: "sinfoto" }, "Sin foto"));
+  const et = $("det-etq");
+  et.replaceChildren(...etiquetas(a).childNodes);
+  $("det-titulo").textContent = a.titulo;
+  $("det-precio").textContent = a.precio;
+  $("det-meta").textContent = a.zona + " · " + textoDias(a);
+  $("det-desc").textContent = a.desc;
+  const w = $("det-wa");
+  if (a.whatsapp) {
+    const msg = "Hola, vi tu anuncio «" + a.titulo + "» en Konecta.ch. ¿Sigue disponible?";
+    w.href = "https://wa.me/" + a.whatsapp + "?text=" + encodeURIComponent(msg);
+    w.removeAttribute("aria-disabled");
+    w.textContent = "Escribir por WhatsApp";
+  } else {
+    w.href = "#";
+    w.setAttribute("aria-disabled", "true");
+    w.textContent = "Anuncio de ejemplo, sin contacto";
+  }
+  history.replaceState(null, "", "#" + a.id);
+  $("det").showModal();
+}
+
+function mostrar() {
+  const q = limpiar($("q").value);
+  const cat = $("cat").value;
+  document.querySelectorAll("#filtros button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.tipo === tipo)));
+  const res = vigentes().filter(a => {
+    if (tipo && a.tipo !== tipo) return false;
+    if (cat && a.cat !== cat) return false;
+    if (!q) return true;
+    const pajar = limpiar([a.titulo, a.desc, a.zona, CATS[a.cat], TIPOS[a.tipo]].join(" "));
+    return q.split(/\s+/).every(p => pajar.includes(p));
+  });
+  $("lista").replaceChildren(...res.map(tarjeta));
+  $("cuenta").textContent = res.length === 1 ? "1 anuncio" : res.length + " anuncios";
+  $("vacio").hidden = res.length > 0;
+  if (!res.length) {
+    const hayFiltro = q || tipo || cat;
+    $("vacio-titulo").textContent = hayFiltro ? "No encontramos anuncios" : "Todavía no hay anuncios";
+    $("vacio-texto").textContent = hayFiltro
+      ? "Prueba con otra palabra o quita algún filtro."
+      : "Estamos empezando. Puedes publicar el primero.";
+  }
+}
+
+function iniciar() {
+  const sel = $("cat");
+  sel.appendChild(el("option", { value: "" }, "Todas las categorías"));
+  Object.entries(CATS).forEach(([k, v]) => sel.appendChild(el("option", { value: k }, v)));
+  Object.entries({ "": "Todos", ...TIPOS }).forEach(([k, v]) => {
+    const b = el("button", { type: "button" }, v);
+    b.dataset.tipo = k;
+    b.addEventListener("click", () => { tipo = k; mostrar(); });
+    $("filtros").appendChild(b);
+  });
+  $("q").addEventListener("input", mostrar);
+  sel.addEventListener("change", mostrar);
+  $("cerrar").addEventListener("click", () => $("det").close());
+  $("det").addEventListener("click", e => { if (e.target === $("det")) $("det").close(); });
+  $("det").addEventListener("close", () => history.replaceState(null, "", location.pathname + location.search));
+  if (/^\d{8,15}$/.test(WHATSAPP)) {
+    document.querySelectorAll("[data-wa]").forEach(a => {
+      a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola, quiero información sobre Konecta.");
+    });
+    const pub = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Hola, quiero publicar un anuncio en Konecta. Te paso: qué vendo o busco, precio, zona de Ginebra, fotos y mi contacto de WhatsApp.");
+    $("publicar").href = pub;
+    $("publicar2").href = pub;
+  }
+  mostrar();
+  const id = location.hash.slice(1);
+  if (id) abrir(id);
+}
+iniciar();
+</script>
+</body>
+</html>
