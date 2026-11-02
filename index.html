@@ -29,7 +29,7 @@ h1,h2,h3{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--tinta)
 .wrap{max-width:64rem;margin:0 auto;padding:0 1.25rem}
 a{color:var(--naranja-txt)}
 a:focus-visible{outline:3px solid #2B6FE0;outline-offset:3px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0}
+.top{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem;padding:1rem 0}
 .marca{font:800 1.75rem "Plus Jakarta Sans",system-ui,sans-serif;color:var(--dark);text-decoration:none;letter-spacing:-.02em}.marca span{color:var(--rojo)}
 .menu{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
 .menu a:not(.btn){color:var(--tinta);font-weight:600;text-decoration:none}
@@ -72,14 +72,14 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
 .cat h3{margin:0 0 .35rem;font-size:1.15rem}
 .cat p{margin:0}
 @media (prefers-reduced-motion:reduce){.cat{transition:none}.cat:hover{transform:none}}
-.marca{display:inline-flex;align-items:center;gap:.55rem}
-.marca img{width:2.25rem;height:2.25rem;border-radius:.5rem;display:block}
+.marca{display:inline-flex;align-items:center;gap:.7rem}
+.marca img{width:3.25rem;height:3.25rem;border-radius:.7rem;display:block}
 </style>
 </head>
 <body>
 <div class="wrap">
   <nav class="top" aria-label="Principal">
-    <a class="marca" href="/"><img src="/logo-konecta.png" width="36" height="36" alt="">Konecta<span>.ch</span></a>
+    <a class="marca" href="/"><img src="/logo-konecta.png" width="52" height="52" alt="">Konecta<span>.ch</span></a>
     <div class="menu">
       <a href="directorio/">Directorio</a>
       <a href="anuncios/">Anuncios</a>
