@@ -28,7 +28,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
 .wrap{max-width:980px;margin:0 auto;padding:0 20px}
 header{padding:18px 0;border-bottom:1px solid var(--line)}
-.brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.35rem;text-decoration:none;letter-spacing:-.01em}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.75rem;text-decoration:none;letter-spacing:-.01em}
 .brand span{color:var(--red)}
 .hero{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:48px;align-items:center;padding:44px 0 40px}
 .hero img{width:100%;height:auto;border-radius:50%;display:block;box-shadow:0 18px 40px -18px rgba(15,23,42,.45)}
@@ -67,13 +67,27 @@ footer a{color:var(--brand-dark)}
   .menu .price{margin-left:auto}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.brand img{width:2.25rem;height:2.25rem;border-radius:.5rem;display:block}
+.brand img{width:3.25rem;height:3.25rem;border-radius:.7rem;display:block}
+header .wrap{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem}
+.navsitio{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.navsitio a{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border:2px solid var(--line);border-radius:.7rem;background:#fff;color:var(--ink);font-weight:700;text-decoration:none}
+.navsitio a:hover{border-color:var(--brand);background:#FFF4EC}
+.navsitio a:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.navsitio a:last-child{border-color:var(--ink)}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap"><a class="brand" href="/"><img src="/logo-konecta.png" width="36" height="36" alt="">Konecta<span>.ch</span></a></div>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/logo-konecta.png" width="52" height="52" alt="">Konecta<span>.ch</span></a>
+    <nav class="navsitio" aria-label="Principal">
+      <a href="/directorio/">Directorio</a>
+      <a href="/anuncios/">Anuncios</a>
+      <a href="/negocios.html">Para negocios</a>
+      <a href="https://wa.me/41783286271?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Konecta." target="_blank" rel="noopener">Escríbenos</a>
+    </nav>
+  </div>
 </header>
 
 <main class="wrap">

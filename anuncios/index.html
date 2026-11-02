@@ -70,7 +70,6 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
 
 .cab{padding:1.5rem 0 .5rem}
 .cab h1{font-size:clamp(2rem,6vw,3rem);margin-bottom:.6rem}
-.menu a.actual{border-bottom:3px solid var(--naranja)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .barra{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.1rem 0 .4rem;align-items:center}
 .buscar,.sel{font:inherit;font-size:1.02rem;padding:.85rem 1rem;border:2px solid var(--linea);border-radius:.6rem;background:#fff;color:var(--texto)}
@@ -114,12 +113,22 @@ dialog::backdrop{background:rgba(20,33,61,.55)}
 @media (prefers-reduced-motion:reduce){.anun{transition:none}.anun:hover{transform:none}.galeria{scroll-behavior:auto}}
 .marca{display:inline-flex;align-items:center;gap:.55rem}
 .marca img{width:2.25rem;height:2.25rem;border-radius:.5rem;display:block}
+.top{flex-direction:column;align-items:flex-start;gap:.8rem}
+.menu{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.menu a:not(.btn){display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border:2px solid var(--linea);border-radius:.7rem;background:#fff;color:var(--tinta);font-weight:700;text-decoration:none}
+.menu a:not(.btn):hover{border-color:var(--naranja);background:#FFF4EC}
+.menu a:not(.btn)[aria-current="page"]{background:var(--tinta);border-color:var(--tinta);color:#fff}
+.menu a:focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+.menu a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border-radius:.7rem;background:#fff;border-color:var(--tinta);font-weight:700}
+.menu a.btn:hover{background:#FFF4EC;border-color:var(--naranja)}
+.marca{gap:.7rem}
+.marca img{width:3.25rem;height:3.25rem;border-radius:.7rem}
 </style>
 </head>
 <body>
 <div class="wrap">
   <nav class="top" aria-label="Principal">
-    <a class="marca" href="/"><img src="/logo-konecta.png" width="36" height="36" alt="">Konecta<span>.ch</span></a>
+    <a class="marca" href="/"><img src="/logo-konecta.png" width="52" height="52" alt="">Konecta<span>.ch</span></a>
     <div class="menu">
       <a href="/directorio/">Directorio</a>
       <a class="actual" href="/anuncios/" aria-current="page">Anuncios</a>
