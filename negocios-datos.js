@@ -31,7 +31,6 @@ const NEGOCIOS = [
     url: "/directorio/felipe-barber/",
     logo: "/directorio/felipe-barber/logo.jpg",
     logoCuadrado: true,
-    oculto: true, /* borra esta línea cuando Andrés apruebe su ficha */
     whatsapp: "41779092261"
   }
 ];

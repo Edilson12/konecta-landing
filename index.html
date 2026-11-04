@@ -96,6 +96,7 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
 .slide.sn{background:linear-gradient(135deg,#F25C05,#B93F00);display:flex;align-items:center;color:#fff}
 .slide.sn .pie{position:static;background:none;padding:1.8rem 1.5rem;max-width:36rem}
 .slide.sn .btn{background:#fff;color:var(--tinta)}
+.slide>img.slogo{inset:auto;top:1rem;left:1rem;width:4.5rem;height:4.5rem;border-radius:50%;border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.35);object-fit:cover}
 .etq-d{background:#fff;color:var(--tinta);font-weight:700;font-size:.85rem;padding:.25rem .75rem;border-radius:2rem}
 .stitle{margin:0;font-size:clamp(1.5rem,4vw,2.4rem);font-weight:800;line-height:1.1}
 .sdesc{margin:0 0 .6rem;max-width:34rem}
@@ -123,6 +124,11 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
 .lista .ficha .acc{margin-top:auto;padding-top:1rem}
 @media (max-width:720px){.pie{padding:2.5rem 1.1rem 1rem}}
 @media (prefers-reduced-motion:reduce){.slides{scroll-behavior:auto}}
+.slide.sf{display:flex;flex-direction:column;background:#0d0d0d;color:#fff}
+.slide.sf>img{position:static;width:100%;height:44%;object-fit:cover;object-position:50% 35%}
+.slide.sf .pie{position:static;background:none;padding:.9rem 1.1rem;flex:1;justify-content:center}
+@media (min-width:721px){.slide.sf{flex-direction:row}.slide.sf>img{width:62%;height:100%}.slide.sf .pie{padding:2rem}}
+@media (max-width:720px){.slide.sf .sdesc{margin-bottom:.3rem}}
 </style>
 </head>
 <body>
@@ -139,23 +145,33 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
 
   <section class="banner" role="region" aria-roledescription="carrusel" aria-label="Negocios destacados">
     <div class="slides" id="slides" tabindex="0">
-      <article class="slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 3">
+      <article class="slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 4">
         <img src="imagenes/banner-arepas-1.jpg" alt="Plato de arepas asadas con café, hogao y queso sobre una mesa de madera" width="1200" height="655" fetchpriority="high">
+        <img class="slogo" src="directorio/arepaisa-del-quindio/logo.jpg" alt="Logo de Arepaisa del Quindío" width="72" height="72">
         <div class="pie">
           <p class="stitle">Arepaisa del Quindío</p>
           <p class="sdesc">Arepas colombianas de maíz, por encargo en Meyrin.</p>
           <a class="btn" href="directorio/arepaisa-del-quindio/">Ver ficha</a>
         </div>
       </article>
-      <article class="slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 3">
+      <article class="slide sf" role="group" aria-roledescription="diapositiva" aria-label="2 de 4">
+        <img src="imagenes/banner-felipe.jpg" alt="Corte de cabello con degradado y raya al lado, trabajo de Felipe Barber" width="1080" height="425" loading="lazy">
+        <div class="pie">
+          <p class="stitle">Felipe Barber</p>
+          <p class="sdesc">Barbería en Servette: cortes, barba y diseños.</p>
+          <a class="btn" href="directorio/felipe-barber/">Ver ficha</a>
+        </div>
+      </article>
+      <article class="slide" role="group" aria-roledescription="diapositiva" aria-label="3 de 4">
         <img src="imagenes/banner-arepas-2.jpg" alt="Tres platos de arepas con huevo, queso y mantequilla" width="1200" height="655" loading="lazy">
+        <img class="slogo" src="directorio/arepaisa-del-quindio/logo.jpg" alt="Logo de Arepaisa del Quindío" width="72" height="72">
         <div class="pie">
           <p class="stitle">Arepas para todos los gustos</p>
           <p class="sdesc">Tradicionales y de queso. Haz tu pedido por WhatsApp.</p>
           <a class="btn" href="https://wa.me/41783286271?text=Hola%2C%20vi%20Arepaisa%20del%20Quind%C3%ADo%20en%20Konecta.ch%20y%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener">Pedir por WhatsApp</a>
         </div>
       </article>
-      <article class="slide sn" role="group" aria-roledescription="diapositiva" aria-label="3 de 3">
+      <article class="slide sn" role="group" aria-roledescription="diapositiva" aria-label="4 de 4">
         <div class="pie">
           <p class="stitle">¿Tienes un negocio latino en Ginebra?</p>
           <p class="sdesc">Los primeros 15 entran como socios fundadores, con 3 meses gratis.</p>
@@ -166,7 +182,7 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
   </section>
   <div class="ctrl">
     <button class="cb ar" id="ant" type="button" aria-label="Diapositiva anterior"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    <span class="dots" id="dots"><button class="dot" type="button" aria-label="Ir a la diapositiva 1" aria-current="true"></button><button class="dot" type="button" aria-label="Ir a la diapositiva 2" aria-current="false"></button><button class="dot" type="button" aria-label="Ir a la diapositiva 3" aria-current="false"></button></span>
+    <span class="dots" id="dots"><button class="dot" type="button" aria-label="Ir a la diapositiva 1" aria-current="true"></button><button class="dot" type="button" aria-label="Ir a la diapositiva 2" aria-current="false"></button><button class="dot" type="button" aria-label="Ir a la diapositiva 3" aria-current="false"></button><button class="dot" type="button" aria-label="Ir a la diapositiva 4" aria-current="false"></button></span>
     <button class="cb ar" id="sig" type="button" aria-label="Diapositiva siguiente"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <button class="cb" id="pausa" type="button">Pausar</button>
   </div>
