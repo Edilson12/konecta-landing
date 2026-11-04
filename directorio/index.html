@@ -101,12 +101,13 @@ a.chip:hover{border-color:var(--tinta)}
 .menu a.btn:hover{background:#FFF4EC;border-color:var(--naranja)}
 .marca{gap:.7rem}
 .marca img{width:3.25rem;height:3.25rem;border-radius:.7rem}
+.nom{font-weight:inherit}
 </style>
 </head>
 <body>
 <div class="wrap">
   <nav class="top" aria-label="Principal">
-    <a class="marca" href="/"><img src="/logo-konecta.png" width="52" height="52" alt="">Konecta<span>.ch</span></a>
+    <a class="marca" href="/"><img src="/logo-konecta.png" width="52" height="52" alt=""><b class="nom">Konecta<span>.ch</span></b></a>
     <div class="menu">
       <a class="actual" href="/directorio/" aria-current="page">Directorio</a>
       <a href="/anuncios/">Anuncios</a>
@@ -137,43 +138,18 @@ a.chip:hover{border-color:var(--tinta)}
   <footer>© 2026 Konecta · Ginebra · <a href="/negocios.html">Para negocios</a> · <a href="/privacidad.html">Política de privacidad</a> · <a href="mailto:hola@konecta.ch">hola@konecta.ch</a></footer>
 </div>
 
+<script src="/negocios-datos.js"></script>
 <script>
 const WHATSAPP = "41783286271";
 
-/* Categorías: la clave va en el enlace (directorio/#belleza) */
-const CATS = {
-  comida: "Comida y tiendas",
-  belleza: "Belleza y bienestar",
-  oficios: "Oficios y reparaciones",
-  tramites: "Trámites y asesoría",
-  envios: "Envíos y viajes",
-  eventos: "Eventos y comunidad"
-};
 
-/* Para sumar un negocio: copia un bloque { ... }, cámbiale los datos y sepáralo con coma. */
-const NEGOCIOS = [
-  {
-    nombre: "Arepaisa del Quindío",
-    cat: "comida",
-    zona: "Meyrin",
-    desc: "Arepas colombianas por encargo en Meyrin.",
-    etiquetas: ["Arepas", "100% maíz", "Colombiana"],
-    url: "/directorio/arepaisa-del-quindio/",
-    logo: "/directorio/arepaisa-del-quindio/logo.jpg",
-    whatsapp: "41783286271"
-  }
-];
+
+
 
 const $ = id => document.getElementById(id);
 const limpiar = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 let cat = "";
 
-function el(tag, props, texto) {
-  const e = document.createElement(tag);
-  if (props) Object.assign(e, props);
-  if (texto) e.textContent = texto;
-  return e;
-}
 
 function crearFiltros() {
   const caja = $("filtros");
@@ -192,31 +168,11 @@ function elegir(clave, actualizarUrl) {
   mostrar();
 }
 
-function tarjeta(n) {
-  const f = el("article", { className: "ficha" });
-  if (n.logo) f.appendChild(el("img", { src: n.logo, alt: "Logo de " + n.nombre, width: 80, height: 80, loading: "lazy" }));
-  const h = el("h3");
-  h.appendChild(el("a", { href: n.url }, n.nombre));
-  f.appendChild(h);
-  f.appendChild(el("span", { className: "ok" }, n.desc));
-  const fila = el("div", { className: "fila" });
-  fila.appendChild(el("span", { className: "chip" }, CATS[n.cat]));
-  fila.appendChild(el("span", { className: "chip" }, n.zona));
-  f.appendChild(fila);
-  const acc = el("div", { className: "fila acc" });
-  acc.appendChild(el("a", { className: "chip", href: n.url }, "Ver ficha"));
-  if (n.whatsapp) {
-    const msg = "Hola, vi " + n.nombre + " en Konecta.ch y quiero hacer una consulta.";
-    acc.appendChild(el("a", { className: "chip", href: "https://wa.me/" + n.whatsapp + "?text=" + encodeURIComponent(msg), target: "_blank", rel: "noopener" }, "WhatsApp"));
-  }
-  f.appendChild(acc);
-  return f;
-}
 
 function mostrar() {
   const q = limpiar($("q").value);
   document.querySelectorAll("#filtros button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.cat === cat)));
-  const res = NEGOCIOS.filter(n => {
+  const res = visibles().filter(n => {
     if (cat && n.cat !== cat) return false;
     if (!q) return true;
     const pajar = limpiar([n.nombre, CATS[n.cat], n.zona, n.desc, (n.etiquetas || []).join(" ")].join(" "));
@@ -245,6 +201,8 @@ if (/^\d{8,15}$/.test(WHATSAPP)) {
 crearFiltros();
 $("q").addEventListener("input", mostrar);
 window.addEventListener("hashchange", () => elegir(location.hash.slice(1), false));
+const q0 = new URLSearchParams(location.search).get("q");
+if (q0) $("q").value = q0;
 elegir(location.hash.slice(1), false);
 </script>
 </body>

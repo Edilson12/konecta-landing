@@ -85,6 +85,44 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
 .marca{gap:.7rem}
 .marca img{width:3.25rem;height:3.25rem;border-radius:.7rem}
 .nom{font-weight:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.banner{position:relative;border-radius:1.1rem;overflow:hidden;background:#222;margin-top:.3rem;padding:0}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.slides::-webkit-scrollbar{display:none}
+.slides:focus-visible{outline:3px solid var(--naranja);outline-offset:-3px}
+.slide{flex:0 0 100%;min-width:0;position:relative;scroll-snap-align:start;height:clamp(19rem,42vw,30rem)}
+.slide>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.pie{position:absolute;left:0;right:0;bottom:0;padding:4rem 1.5rem 1.4rem;background:linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,0));color:#fff;display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
+.slide.sn{background:linear-gradient(135deg,#F25C05,#B93F00);display:flex;align-items:center;color:#fff}
+.slide.sn .pie{position:static;background:none;padding:1.8rem 1.5rem;max-width:36rem}
+.slide.sn .btn{background:#fff;color:var(--tinta)}
+.etq-d{background:#fff;color:var(--tinta);font-weight:700;font-size:.85rem;padding:.25rem .75rem;border-radius:2rem}
+.stitle{margin:0;font-size:clamp(1.5rem,4vw,2.4rem);font-weight:800;line-height:1.1}
+.sdesc{margin:0 0 .6rem;max-width:34rem}
+.ctrl{display:flex;justify-content:center;align-items:center;gap:.4rem;margin:.8rem 0 .2rem;flex-wrap:wrap}
+.cb{min-width:2.75rem;height:2.75rem;border-radius:2rem;border:2px solid var(--linea);background:#fff;color:var(--tinta);display:inline-grid;place-items:center;cursor:pointer;font-family:inherit;font-weight:700;font-size:.95rem;padding:0 .9rem}
+.cb.ar{width:2.75rem;padding:0}
+.cb:hover{border-color:var(--naranja)}
+.cb:focus-visible,.dot:focus-visible{outline:3px solid var(--naranja);outline-offset:2px}
+.dots{display:inline-flex;align-items:center}
+.dot{width:1.6rem;height:2.75rem;background:transparent;border:0;padding:0;position:relative;cursor:pointer}
+.dot::before{content:"";position:absolute;left:50%;top:50%;width:.8rem;height:.8rem;margin:-.4rem 0 0 -.4rem;border-radius:50%;background:#C3CDDD}
+.dot[aria-current="true"]::before{background:var(--tinta)}
+.intro{padding:1rem 0 .6rem}
+.intro h1{font-size:clamp(1.9rem,5vw,2.8rem);margin:0 0 .6rem}
+.intro p{color:var(--suave);max-width:40rem;margin:0 0 1.2rem;font-size:1.1rem}
+.busca{display:flex;gap:.6rem;max-width:40rem}
+.busca input{flex:1;min-width:0;font:inherit;font-size:1.05rem;padding:.85rem 1.1rem;border:2px solid var(--linea);border-radius:.7rem;background:#fff;color:var(--texto)}
+.busca input:focus{outline:3px solid var(--naranja);outline-offset:2px;border-color:var(--tinta)}
+.lista{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));align-items:stretch}
+.lista .ficha{max-width:none;height:100%;display:flex;flex-direction:column}
+.lista .ficha h3 a{color:var(--tinta);text-decoration:none}
+.lista .ficha h3 a:hover{text-decoration:underline}
+.lista .ficha img{object-fit:cover}
+.lista .ficha .fila{margin-top:.8rem}
+.lista .ficha .acc{margin-top:auto;padding-top:1rem}
+@media (max-width:720px){.pie{padding:3.5rem 1.1rem 1.1rem}}
+@media (prefers-reduced-motion:reduce){.slides{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -99,28 +137,51 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
     </div>
   </nav>
 
-  <header class="hero">
-    <div>
-      <span class="etiqueta">Abriendo en Ginebra</span>
-      <h1>Los negocios latinos de Ginebra, <mark>en un solo lugar</mark></h1>
-      <p>Restaurantes, belleza, oficios, trámites y más. Con WhatsApp directo, horario y cómo llegar.</p>
-      <div class="acciones">
-        <a class="btn" data-wa data-msg="Hola, quiero que me avisen cuando abra el directorio de Konecta." href="mailto:hola@konecta.ch">Avísame cuando abra</a>
-        <a class="btn sec" href="negocios.html">Tengo un negocio</a>
-      </div>
+  <section class="banner" role="region" aria-roledescription="carrusel" aria-label="Negocios destacados">
+    <div class="slides" id="slides" tabindex="0">
+      <article class="slide" role="group" aria-roledescription="diapositiva" aria-label="1 de 3">
+        <img src="imagenes/banner-arepas-1.jpg" alt="Plato de arepas asadas con café, hogao y queso sobre una mesa de madera" width="1200" height="655" fetchpriority="high">
+        <div class="pie">
+          <span class="etq-d">Destacado · Negocio del fundador</span>
+          <p class="stitle">Arepaisa del Quindío</p>
+          <p class="sdesc">Arepas colombianas de maíz, por encargo en Meyrin.</p>
+          <a class="btn" href="directorio/arepaisa-del-quindio/">Ver ficha</a>
+        </div>
+      </article>
+      <article class="slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 3">
+        <img src="imagenes/banner-arepas-2.jpg" alt="Tres platos de arepas con huevo, queso y mantequilla" width="1200" height="655" loading="lazy">
+        <div class="pie">
+          <span class="etq-d">Destacado · Negocio del fundador</span>
+          <p class="stitle">Arepas para todos los gustos</p>
+          <p class="sdesc">Tradicionales y de queso. Haz tu pedido por WhatsApp.</p>
+          <a class="btn" href="https://wa.me/41783286271?text=Hola%2C%20vi%20Arepaisa%20del%20Quind%C3%ADo%20en%20Konecta.ch%20y%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener">Pedir por WhatsApp</a>
+        </div>
+      </article>
+      <article class="slide sn" role="group" aria-roledescription="diapositiva" aria-label="3 de 3">
+        <div class="pie">
+          <p class="stitle">¿Tienes un negocio latino en Ginebra?</p>
+          <p class="sdesc">Los primeros 15 entran como socios fundadores, con 3 meses gratis.</p>
+          <a class="btn" href="negocios.html">Ver cómo funciona</a>
+        </div>
+      </article>
     </div>
-    <div class="ficha" aria-label="Primer negocio en Konecta">
-      <img src="directorio/arepaisa-del-quindio/logo.jpg" alt="Logo de Arepaisa del Quindío" width="88" height="88">
-      <h3>Arepaisa del Quindío</h3>
-      <span class="ok">Arepas colombianas por encargo en Meyrin</span>
-      <div class="fila">
-        <a class="chip" href="https://wa.me/41783286271?text=Hola%2C%20vi%20Arepaisa%20del%20Quind%C3%ADo%20en%20Konecta.ch%20y%20quiero%20hacer%20un%20pedido.">WhatsApp</a>
-        <a class="chip" href="tel:+41783286271">Llamar</a>
-        <a class="chip" href="directorio/arepaisa-del-quindio/">Ver ficha</a>
-      </div>
-      <small>Uno de los primeros negocios de Konecta</small>
-    </div>
-  </header>
+  </section>
+  <div class="ctrl">
+    <button class="cb ar" id="ant" type="button" aria-label="Diapositiva anterior"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <span class="dots" id="dots"><button class="dot" type="button" aria-label="Ir a la diapositiva 1" aria-current="true"></button><button class="dot" type="button" aria-label="Ir a la diapositiva 2" aria-current="false"></button><button class="dot" type="button" aria-label="Ir a la diapositiva 3" aria-current="false"></button></span>
+    <button class="cb ar" id="sig" type="button" aria-label="Diapositiva siguiente"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button class="cb" id="pausa" type="button">Pausar</button>
+  </div>
+
+  <section class="intro">
+    <h1>Los negocios latinos de Ginebra, <mark>en un solo lugar</mark></h1>
+    <p>Restaurantes, belleza, oficios, trámites y más. Con WhatsApp directo, horario y cómo llegar.</p>
+    <form class="busca" action="directorio/" method="get" role="search">
+      <label class="sr" for="busca">Buscar negocios</label>
+      <input id="busca" name="q" type="search" placeholder="Buscar negocios, servicios o zona" autocomplete="off">
+      <button class="btn" type="submit">Buscar</button>
+    </form>
+  </section>
 
   <main>
     <section id="categorias">
@@ -154,6 +215,13 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
       </div>
     </section>
 
+    <section id="destacados">
+      <h2>Negocios destacados</h2>
+      <p class="sub">Los primeros negocios de Konecta. Escríbeles directo por WhatsApp.</p>
+      <div class="lista" id="lista-dest"></div>
+      <p style="margin-top:1.4rem"><a class="btn sec" href="directorio/">Ver todo el directorio</a></p>
+    </section>
+
     <section>
       <h2>Por qué Konecta</h2>
       <div class="rejilla" style="margin-top:1.5rem">
@@ -181,6 +249,7 @@ a.cat:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
   <footer>© 2026 Konecta · Ginebra · <a href="negocios.html">Para negocios</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="mailto:hola@konecta.ch">hola@konecta.ch</a></footer>
 </div>
 
+<script src="negocios-datos.js"></script>
 <script>
 // EDITAR: tu número de WhatsApp, con prefijo de país, sin + ni espacios (ejemplo: 41791234567)
 const WHATSAPP = "41783286271";
@@ -190,6 +259,53 @@ if (/^\d{8,15}$/.test(WHATSAPP)) {
     a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.dataset.msg || MENSAJE);
   });
 }
+
+/* Negocios destacados (salen de negocios-datos.js) */
+(function () {
+  const caja = document.getElementById("lista-dest");
+  if (!caja || typeof visibles !== "function") return;
+  const v = visibles().slice(0, 4);
+  if (!v.length) { document.getElementById("destacados").hidden = true; return; }
+  caja.replaceChildren(...v.map(tarjeta));
+})();
+
+/* Banner: pasa solo cada 6 s, se puede mover con flechas, puntos o deslizando, y se puede pausar */
+(function () {
+  const sl = document.getElementById("slides");
+  if (!sl) return;
+  const n = sl.children.length;
+  const dots = [...document.querySelectorAll(".dot")];
+  const pausa = document.getElementById("pausa");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let idx = 0, enPausa = reduce, encima = false, timer = null;
+  const marcar = () => dots.forEach((d, k) => d.setAttribute("aria-current", String(k === idx)));
+  const parar = () => { clearInterval(timer); timer = null; };
+  const arrancar = () => { parar(); if (!enPausa && !encima && !document.hidden) timer = setInterval(() => ir(idx + 1), 6000); };
+  function ir(i) {
+    idx = (i + n) % n;
+    sl.scrollTo({ left: idx * sl.clientWidth, behavior: reduce ? "auto" : "smooth" });
+    marcar();
+  }
+  const textoPausa = () => { pausa.textContent = enPausa ? "Reanudar" : "Pausar"; pausa.setAttribute("aria-label", enPausa ? "Reanudar el cambio automático" : "Pausar el cambio automático"); };
+  sl.addEventListener("scroll", () => {
+    const i = Math.round(sl.scrollLeft / sl.clientWidth);
+    if (i >= 0 && i < n && i !== idx) { idx = i; marcar(); }
+  }, { passive: true });
+  document.getElementById("ant").addEventListener("click", () => { ir(idx - 1); arrancar(); });
+  document.getElementById("sig").addEventListener("click", () => { ir(idx + 1); arrancar(); });
+  dots.forEach((d, k) => d.addEventListener("click", () => { ir(k); arrancar(); }));
+  pausa.addEventListener("click", () => { enPausa = !enPausa; textoPausa(); arrancar(); });
+  const banner = sl.closest(".banner");
+  banner.addEventListener("mouseenter", () => { encima = true; parar(); });
+  banner.addEventListener("mouseleave", () => { encima = false; arrancar(); });
+  banner.addEventListener("focusin", () => { encima = true; parar(); });
+  banner.addEventListener("focusout", () => { encima = false; arrancar(); });
+  sl.addEventListener("pointerdown", parar);
+  sl.addEventListener("pointerup", () => setTimeout(arrancar, 4000));
+  document.addEventListener("visibilitychange", arrancar);
+  window.addEventListener("resize", () => sl.scrollTo({ left: idx * sl.clientWidth, behavior: "auto" }));
+  textoPausa(); marcar(); arrancar();
+})();
 </script>
 </body>
 </html>
