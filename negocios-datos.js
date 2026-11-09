@@ -32,6 +32,17 @@ const NEGOCIOS = [
     logo: "/directorio/felipe-barber/logo.jpg",
     logoCuadrado: true,
     whatsapp: "41779092261"
+  },
+  {
+    nombre: "Gómez Beauty by Daniela",
+    cat: "belleza",
+    zona: "A domicilio en Ginebra",
+    desc: "Uñas, pedicura y cejas a domicilio, con cita.",
+    etiquetas: ["Uñas", "Manicura", "Acrílico", "Gel", "Pedicura", "Cejas", "Maquillaje", "Peinados"],
+    url: "/directorio/gomez-beauty/",
+    logo: "/directorio/gomez-beauty/logo.jpg",
+    logoCuadrado: true,
+    whatsapp: "41783423046"
   }
 ];
 
