@@ -1,6 +1,7 @@
 /* DATOS DE KONECTA: aquí se agregan los negocios.
    Para sumar uno: copia un bloque { ... } de NEGOCIOS, cambia sus datos y sepáralo con coma.
    La categoría (cat) usa una de estas claves: comida, belleza, oficios, tramites, envios, eventos.
+   Redes (opcionales): instagram, facebook, tiktok con el enlace completo.
    Con la línea  oculto: true  el negocio no aparece en la web; bórrala para publicarlo. */
 const CATS = {
   comida: "Comida y tiendas",
@@ -42,7 +43,8 @@ const NEGOCIOS = [
     url: "/directorio/gomez-beauty/",
     logo: "/directorio/gomez-beauty/logo.jpg",
     logoCuadrado: true,
-    whatsapp: "41783423046"
+    whatsapp: "41783423046",
+    instagram: "https://www.instagram.com/gomezbeauty1/"
   }
 ];
 
@@ -71,11 +73,14 @@ function tarjeta(n) {
   fila.appendChild(el("span", { className: "chip" }, n.zona));
   f.appendChild(fila);
   const acc = el("div", { className: "fila acc" });
-  acc.appendChild(el("a", { className: "chip", href: n.url }, "Ver ficha"));
   if (n.whatsapp) {
     const msg = "Hola, vi " + n.nombre + " en Konecta.ch y quiero hacer una consulta.";
-    acc.appendChild(el("a", { className: "chip", href: "https://wa.me/" + n.whatsapp + "?text=" + encodeURIComponent(msg), target: "_blank", rel: "noopener" }, "WhatsApp"));
+    acc.appendChild(el("a", { className: "chip chip-wa", href: "https://wa.me/" + n.whatsapp + "?text=" + encodeURIComponent(msg), target: "_blank", rel: "noopener" }, "WhatsApp"));
   }
+  acc.appendChild(el("a", { className: "chip", href: n.url }, "Ver ficha"));
+  [["instagram", "Instagram"], ["facebook", "Facebook"], ["tiktok", "TikTok"]].forEach(([k, t]) => {
+    if (n[k]) acc.appendChild(el("a", { className: "chip chip-red", href: n[k], target: "_blank", rel: "noopener" }, t));
+  });
   f.appendChild(acc);
   return f;
 }
