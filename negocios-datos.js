@@ -50,7 +50,7 @@ const NEGOCIOS = [
     nombre: "Edilson – Bricolaje y montaje",
     cat: "oficios",
     zona: "A domicilio en Ginebra",
-    desc: "Bricolaje, pequeños trabajos eléctricos y montaje de muebles a domicilio. 25 CHF la hora.",
+    desc: "Bricolaje, pequeños trabajos eléctricos y montaje de muebles a domicilio. 30 CHF la hora.",
     etiquetas: ["Bricolaje", "Pequeños trabajos eléctricos", "Eléctrico", "Montaje de muebles", "A domicilio", "Reparaciones"],
     url: "/directorio/edilson-bricolaje/",
     logo: "/directorio/edilson-bricolaje/logo.png",
