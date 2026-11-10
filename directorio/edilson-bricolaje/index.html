@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#F25C05">
+<meta name="apple-mobile-web-app-title" content="Konecta">
+<title>Edilson – Bricolaje y montaje de muebles en Ginebra | Konecta.ch</title>
+<meta name="description" content="Bricolaje, pequeños trabajos eléctricos y montaje de muebles a domicilio en Ginebra. Tarifa de 25 CHF la hora. Escribe por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f172a; --muted:#475569; --brand:#F25C05; --brand-dark:#c94a00;
+  --red:#dc2626; --bg:#fffdfa; --line:#e7e2d8; --soft:#fbf4e6;
+  --wa:#1faa59; --wa-dark:#17894a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header{padding:18px 0;border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.75rem;text-decoration:none;letter-spacing:-.01em}
+.brand span{color:var(--red)}
+.hero{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:48px;align-items:center;padding:44px 0 40px}
+.hero img{width:100%;height:auto;border-radius:50%;display:block;box-shadow:0 18px 40px -18px rgba(15,23,42,.45)}
+.badge{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.85rem;font-weight:700;color:var(--brand-dark);margin-bottom:14px}
+h1{font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.05;margin:0 0 12px;letter-spacing:-.02em;font-weight:800}
+.lead{font-size:1.1rem;color:var(--muted);margin:0 0 24px;max-width:46ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;min-height:48px}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-dark)}
+.btn-call{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-call:hover{background:var(--ink);color:#fff}
+section{padding:34px 0;border-top:1px solid var(--line)}
+h2{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 20px}
+.menu{list-style:none;margin:0;padding:0}
+.menu li{display:flex;align-items:baseline;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.menu li:last-child{border-bottom:0}
+.menu .name{font-weight:800;font-size:1.15rem}
+.menu .pack{color:var(--muted);font-size:.95rem}
+.menu .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.menu .price{font-weight:800;font-size:1.4rem;color:var(--brand-dark);white-space:nowrap}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.info h3{margin:0 0 4px;font-size:1rem}
+.info p{margin:0;color:var(--muted)}
+.info a{color:var(--brand-dark);font-weight:700}
+.founder{background:var(--soft);border-radius:14px;padding:18px 20px;color:var(--muted);font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:26px 0 90px;color:var(--muted);font-size:.9rem}
+footer a{color:var(--brand-dark)}
+.float{position:fixed;right:16px;bottom:16px;z-index:10;box-shadow:0 10px 24px -8px rgba(0,0,0,.45);border-radius:999px}
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;gap:26px;padding-top:28px;text-align:left}
+  .hero img{max-width:260px}
+  .menu li{flex-wrap:wrap}
+  .menu .dots{display:none}
+  .menu .price{margin-left:auto}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.brand img{width:3.25rem;height:3.25rem;border-radius:.7rem;display:block}
+header .wrap{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem}
+.navsitio{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.navsitio a{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border:2px solid var(--line);border-radius:.7rem;background:#fff;color:var(--ink);font-weight:700;text-decoration:none}
+.navsitio a:hover{border-color:var(--brand);background:#FFF4EC}
+.navsitio a:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.navsitio a:last-child{border-color:var(--ink)}
+.hero img{border-radius:1.4rem}
+.serv{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.7rem}
+.serv li{background:var(--soft);border:1px solid var(--line);border-radius:.7rem;padding:.8rem 1rem;font-weight:700}
+.nom{font-weight:inherit}
+.trabajo{width:100%;height:auto;border-radius:1rem;display:block}
+.redes-t{margin:0 0 .6rem;font-weight:700;color:var(--ink)}
+.redes{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1.2rem}
+.redes a{display:inline-flex;align-items:center;gap:.45rem;min-height:2.75rem;padding:.4rem 1rem;border:2px solid var(--line);border-radius:2rem;background:#fff;color:var(--ink);font-weight:700;text-decoration:none}
+.redes a:hover{border-color:var(--brand);background:#FFF4EC}
+.redes a:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+
+.menu .pack{display:block}
+.hero.solo{grid-template-columns:1fr;padding:44px 0 34px}
+.hero.solo .lead{max-width:56ch}
+.nota{background:var(--soft);border-radius:14px;padding:16px 20px;color:var(--muted);font-size:.97rem;margin-top:18px}
+.hero .logo-f{border-radius:1.4rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.9rem}
+.gal img{width:100%;height:auto;border-radius:1rem;display:block}
+.marcas{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.marcas li{background:var(--soft);border:1px solid var(--line);border-radius:2rem;padding:.45rem 1rem;font-weight:700}
+.peq{color:var(--muted);font-size:.88rem;margin:.9rem 0 0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/logo-konecta.png" width="52" height="52" alt=""><b class="nom">Konecta<span>.ch</span></b></a>
+    <nav class="navsitio" aria-label="Principal">
+      <a href="/directorio/">Directorio</a>
+      <a href="/anuncios/">Anuncios</a>
+      <a href="/negocios.html">Para negocios</a>
+      <a href="https://wa.me/41782515441?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Konecta." target="_blank" rel="noopener">Escríbenos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <img class="logo-f" src="logo.png" alt="Logo: martillo y rayo, bricolaje y pequeños trabajos eléctricos" width="340" height="340">
+    <div>
+      <span class="badge">Oficios y reparaciones</span>
+      <h1>Edilson</h1>
+      <p class="lead">Bricolaje, pequeños trabajos eléctricos y montaje de muebles, a domicilio en Ginebra. Tarifa de 25 CHF la hora.</p>
+      <div class="actions">
+        <a class="btn btn-wa" href="https://wa.me/41783286271?text=Hola%2C%20vi%20tu%20ficha%20en%20Konecta.ch%20y%20quiero%20consultar%20por%20un%20trabajo." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn btn-call" href="tel:+41783286271">Llamar al 078 328 62 71</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <p class="sub">Trabajo a domicilio.</p>
+    <ul class="serv">
+      <li>Bricolaje</li>
+      <li>Pequeños trabajos eléctricos</li>
+      <li>Montaje de muebles</li>
+    </ul>
+  </section>
+
+  <section id="tarifa">
+    <h2>Tarifa</h2>
+    <ul class="menu">
+      <li><span><b class="name">Mano de obra</b><span class="pack"> Por hora de trabajo</span></span><i class="dots"></i><span class="price">25 CHF</span></li>
+    </ul>
+  </section>
+
+  <section id="info">
+    <div class="info">
+      <div>
+        <h3>Dónde trabajo</h3>
+        <p>A domicilio en Ginebra.</p>
+      </div>
+      <div>
+        <h3>Cómo contactar</h3>
+        <p>Escribe por WhatsApp o llama al <a href="tel:+41783286271">078 328 62 71</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="founder">
+      ¿Tienes un negocio o un servicio en Ginebra? <a href="/negocios.html">Mira cómo estar en Konecta</a>.
+    </div>
+  </section>
+
+</main>
+
+<a class="btn btn-wa float" href="https://wa.me/41783286271?text=Hola%2C%20vi%20tu%20ficha%20en%20Konecta.ch%20y%20quiero%20consultar%20por%20un%20trabajo." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
+
+<footer>
+  <div class="wrap">
+    <p class="redes-t">Síguenos en redes</p>
+    <div class="redes"><a href="https://www.instagram.com/konecta.ch/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram</a></div>
+    <p>© 2026 Konecta™ · <a href="/">Konecta.ch</a> · Directorio de negocios latinos en Ginebra · Todos los derechos reservados · <a href="/privacidad.html">Política de privacidad</a></p>
+    <small style="display:block;margin-top:.7rem;line-height:1.5">Konecta™ es una marca de Konecta. Todos los derechos reservados: el nombre, el logo, los textos y el diseño de este sitio no pueden copiarse, registrarse ni usarse sin autorización escrita. Los logos y fotos de cada negocio pertenecen a sus titulares.</small>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Edilson – Bricolaje y montaje de muebles",
+  "description":"Bricolaje, pequeños trabajos eléctricos y montaje de muebles a domicilio en Ginebra. 25 CHF la hora.",
+  "telephone":"+41783286271",
+  "areaServed":{"@type":"City","name":"Genève"},
+  "url":"https://konecta.ch/directorio/edilson-bricolaje/"
+}
+</script>
+</body>
+</html>

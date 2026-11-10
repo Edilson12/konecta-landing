@@ -45,6 +45,28 @@ const NEGOCIOS = [
     logoCuadrado: true,
     whatsapp: "41783423046",
     instagram: "https://www.instagram.com/gomezbeauty1/"
+  },
+  {
+    nombre: "Edilson – Bricolaje y montaje",
+    cat: "oficios",
+    zona: "A domicilio en Ginebra",
+    desc: "Bricolaje, pequeños trabajos eléctricos y montaje de muebles a domicilio. 25 CHF la hora.",
+    etiquetas: ["Bricolaje", "Pequeños trabajos eléctricos", "Eléctrico", "Montaje de muebles", "A domicilio", "Reparaciones"],
+    url: "/directorio/edilson-bricolaje/",
+    logo: "/directorio/edilson-bricolaje/logo.png",
+    logoCuadrado: true,
+    whatsapp: "41783286271"
+  },
+  {
+    nombre: "Edilson – Formateo y mantenimiento de PC",
+    cat: "oficios",
+    zona: "Ginebra",
+    desc: "Formateo e instalación de Windows, limpieza y optimización de PC.",
+    etiquetas: ["Formateo", "Windows", "PC", "Computador", "Limpieza", "Antivirus", "Informática", "HP", "Acer", "Lenovo", "Dell", "ASUS", "Laptop"],
+    url: "/directorio/edilson-informatica/",
+    logo: "/directorio/edilson-informatica/logo.png",
+    logoCuadrado: true,
+    whatsapp: "41783286271"
   }
 ];
 
