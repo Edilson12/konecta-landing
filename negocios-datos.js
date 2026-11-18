@@ -67,6 +67,17 @@ const NEGOCIOS = [
     logo: "/directorio/edilson-informatica/logo.png",
     logoCuadrado: true,
     whatsapp: "41783286271"
+  },
+  {
+    nombre: "Jireh Coffee",
+    cat: "comida",
+    zona: "Bélgica, envía a Suiza",
+    desc: "Café colombiano de especialidad, 100 % arábica. Envíos a Suiza.",
+    etiquetas: ["Café", "Café colombiano", "Especialidad", "Arábica", "Tolima", "Envíos a Suiza"],
+    url: "/directorio/jireh-coffee/",
+    logo: "/directorio/jireh-coffee/logo.jpg",
+    logoCuadrado: true,
+    whatsapp: "32489739264"
   }
 ];
 
