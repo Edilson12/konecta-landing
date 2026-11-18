@@ -75,7 +75,7 @@ const NEGOCIOS = [
     desc: "Café colombiano de especialidad, 100 % arábica. Envíos a Suiza.",
     etiquetas: ["Café", "Café colombiano", "Especialidad", "Arábica", "Tolima", "Envíos a Suiza"],
     url: "/directorio/jireh-coffee/",
-    logo: "/directorio/jireh-coffee/logo.jpg",
+    logo: "/directorio/jireh-coffee/logo-tarjeta.jpg",
     logoCuadrado: true,
     whatsapp: "32489739264"
   }
