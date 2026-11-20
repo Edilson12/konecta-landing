@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#F25C05">
+<meta name="apple-mobile-web-app-title" content="Konecta">
+<title>Ficha de muestra: Los Incas | Konecta.ch</title>
+<meta name="description" content="Restaurante Los Incas, la trilogía del sabor latino: cocina de Bolivia, Perú y Colombia en Rue Louise-De-Frotté 105, Ginebra. Menú del día a 10 CHF. Reservas por teléfono.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0f172a; --muted:#475569; --brand:#F25C05; --brand-dark:#c94a00;
+  --red:#dc2626; --bg:#fffdfa; --line:#e7e2d8; --soft:#fbf4e6;
+  --wa:#1faa59; --wa-dark:#17894a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header{padding:18px 0;border-bottom:1px solid var(--line)}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.75rem;text-decoration:none;letter-spacing:-.01em}
+.brand span{color:var(--red)}
+.hero{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:48px;align-items:center;padding:44px 0 40px}
+.hero img{width:100%;height:auto;border-radius:50%;display:block;box-shadow:0 18px 40px -18px rgba(15,23,42,.45)}
+.badge{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.85rem;font-weight:700;color:var(--brand-dark);margin-bottom:14px}
+h1{font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.05;margin:0 0 12px;letter-spacing:-.02em;font-weight:800}
+.lema{font-style:italic;font-weight:700;color:var(--brand-dark);margin:0 0 10px}
+.lead{font-size:1.1rem;color:var(--muted);margin:0 0 24px;max-width:46ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;min-height:48px}
+.btn-call{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-call:hover{background:var(--ink);color:#fff}
+.btn-main{background:var(--ink);color:#fff}
+.btn-main:hover{background:#1e293b}
+section{padding:34px 0;border-top:1px solid var(--line)}
+h2{font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 20px}
+.destacado{background:var(--soft);border:2px solid var(--brand-dark);border-radius:16px;padding:22px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px}
+.destacado .precio{font-weight:800;font-size:2.4rem;line-height:1;color:var(--brand-dark);white-space:nowrap}
+.destacado h2{margin:0 0 4px}
+.destacado p{margin:0;color:var(--muted)}
+.menu{list-style:none;margin:0;padding:0}
+.menu li{display:flex;align-items:baseline;gap:14px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.menu li:last-child{border-bottom:0}
+.menu .name{font-weight:800;font-size:1.15rem}
+.menu .pack{color:var(--muted);font-size:.95rem}
+.menu .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:20px}
+.menu .price{font-weight:800;font-size:1.4rem;color:var(--brand-dark);white-space:nowrap}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.info h3{margin:0 0 4px;font-size:1rem}
+.info p{margin:0;color:var(--muted)}
+.info a{color:var(--brand-dark);font-weight:700}
+.founder{background:var(--soft);border-radius:14px;padding:18px 20px;color:var(--muted);font-size:.95rem}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:.9rem}
+footer a{color:var(--brand-dark)}
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr;gap:26px;padding-top:28px;text-align:left}
+  .hero img{max-width:260px}
+  .menu li{flex-wrap:wrap}
+  .menu .dots{display:none}
+  .menu .price{margin-left:auto}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.brand img{width:3.25rem;height:3.25rem;border-radius:.7rem;display:block}
+header .wrap{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem}
+.navsitio{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.navsitio a{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.5rem 1.1rem;border:2px solid var(--line);border-radius:.7rem;background:#fff;color:var(--ink);font-weight:700;text-decoration:none}
+.navsitio a:hover{border-color:var(--brand);background:#FFF4EC}
+.navsitio a:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.navsitio a:last-child{border-color:var(--ink)}
+.nom{font-weight:inherit}
+.redes-t{margin:0 0 .6rem;font-weight:700;color:var(--ink)}
+.redes{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1.2rem}
+.redes a{display:inline-flex;align-items:center;gap:.45rem;min-height:2.75rem;padding:.4rem 1rem;border:2px solid var(--line);border-radius:2rem;background:#fff;color:var(--ink);font-weight:700;text-decoration:none}
+.redes a:hover{border-color:var(--brand);background:#FFF4EC}
+.redes a:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.muestra{background:#FFE7A3;color:#3d2a00;border-bottom:2px solid #c99700;text-align:center;font-weight:800;padding:10px 20px;font-size:1rem}
+</style>
+</head>
+<body>
+
+<div class="muestra" role="note">Ficha de muestra – pendiente de aprobación</div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/logo-konecta.png" width="52" height="52" alt=""><b class="nom">Konecta<span>.ch</span></b></a>
+    <nav class="navsitio" aria-label="Principal">
+      <a href="/directorio/">Directorio</a>
+      <a href="/anuncios/">Anuncios</a>
+      <a href="/negocios.html">Para negocios</a>
+      <a href="https://wa.me/41782515441?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Konecta." target="_blank" rel="noopener">Escríbenos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <img src="logo.jpg" alt="Logo del restaurante Los Incas: sol inca dorado dentro de un círculo con el lema «La trilogía del sabor latino»" width="400" height="400">
+    <div>
+      <span class="badge">Cocina de Bolivia, Perú y Colombia</span>
+      <h1>Los Incas</h1>
+      <p class="lema">La trilogía del sabor latino</p>
+      <p class="lead">Restaurante en Ginebra con cocina de Bolivia, Perú y Colombia. Reserva tu mesa por teléfono.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="tel:+41766239917">Reservar: +41 76 623 99 17</a>
+        <a class="btn btn-call" href="tel:+41223205044">Llamar al +41 22 320 50 44</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="menu-del-dia">
+    <div class="destacado">
+      <span class="precio">10 CHF</span>
+      <div>
+        <h2>Menú del día</h2>
+        <p>De lunes a viernes, desde las 19:00. Pago con TWINT o en efectivo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="platos">
+    <h2>Platos estrella</h2>
+    <p class="sub">Precios en francos suizos, válidos para consumo en el local.</p>
+    <ul class="menu">
+      <li>
+        <div><div class="name">Ceviche</div></div>
+        <span class="dots"></span>
+        <span class="price">25 CHF</span>
+      </li>
+      <li>
+        <div><div class="name">Lomo saltado</div></div>
+        <span class="dots"></span>
+        <span class="price">30 CHF</span>
+      </li>
+      <li>
+        <div><div class="name">Bandeja paisa</div></div>
+        <span class="dots"></span>
+        <span class="price">34 CHF</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="info">
+    <div class="info">
+      <div>
+        <h3>Dónde estamos</h3>
+        <p>Rue Louise-De-Frotté 105, 1205 Genève. <a href="https://www.google.com/maps/search/?api=1&query=Rue+Louise-De-Frott%C3%A9+105+1205+Gen%C3%A8ve" target="_blank" rel="noopener">Ver en el mapa</a></p>
+      </div>
+      <div>
+        <h3>Reservas</h3>
+        <p>Llámanos al <a href="tel:+41766239917">+41 76 623 99 17</a> o al <a href="tel:+41223205044">+41 22 320 50 44</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="founder">
+      ¿Tienes un negocio latino en Ginebra? <a href="/negocios.html">Mira cómo estar en Konecta</a>.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="redes-t">Síguenos en redes</p>
+    <div class="redes"><a href="https://www.instagram.com/konecta.ch/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>Instagram</a><a href="https://www.tiktok.com/@konecta.ch" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>TikTok</a><a href="https://www.facebook.com/konecta.ch" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a><a href="https://www.youtube.com/@konectach" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>YouTube</a></div>
+        </div>
+    <p>© 2026 Konecta™ · <a href="/">Konecta.ch</a> · Directorio de negocios latinos en Ginebra · Todos los derechos reservados · <a href="/privacidad.html">Política de privacidad</a></p>
+    <small style="display:block;margin-top:.7rem;line-height:1.5">Konecta™ es una marca de Konecta. Todos los derechos reservados: el nombre, el logo, los textos y el diseño de este sitio no pueden copiarse, registrarse ni usarse sin autorización escrita. Los logos y fotos de cada negocio pertenecen a sus titulares.</small>
+  </div>
+</footer>
+
+</body>
+</html>
