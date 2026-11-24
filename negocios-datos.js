@@ -32,7 +32,8 @@ const NEGOCIOS = [
     url: "/directorio/felipe-barber/",
     logo: "/directorio/felipe-barber/logo.jpg",
     logoCuadrado: true,
-    whatsapp: "41779092261"
+    whatsapp: "41779092261",
+    instagram: "https://www.instagram.com/felipebarbero3/"
   },
   {
     nombre: "Gómez Beauty by Daniela",
